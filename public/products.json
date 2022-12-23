@@ -1,0 +1,75 @@
+[
+  {
+    "id": 1,
+    "nome": "Tênis Nike Air Max TW",
+    "genero": "Masculino",
+    "preco": 1299.99,
+    "tamanhos": [37, 38, 40, 42, 43, 44, 45],
+    "imagens": [
+      {
+        "cor": "azul",
+        "url": "https://imgnike-a.akamaihd.net/768x768/02434651.jpg"
+      },
+      {
+        "cor": "vermelho",
+        "url": "https://imgnike-a.akamaihd.net/768x768/0243467T.jpg"
+      },
+      {
+        "cor": "preto",
+        "url": "https://imgnike-a.akamaihd.net/768x768/024346ID.jpg"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "nome": "Tênis Nike Air Force 1 \"07 LV8 Next Nature",
+    "genero": "Masculino",
+    "preco": 899.99,
+    "tamanhos": [37, 38, 44, 45, 46],
+    "imagens": [
+      {
+        "cor": "cinza",
+        "url": "https://imgnike-a.akamaihd.net/768x768/0223177T.jpg"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "nome": "Tênis Nike Air Max Plus SE",
+    "genero": "Masculino",
+    "preco": 1499.99,
+    "tamanhos": [42, 43, 45, 46],
+    "imagens": [
+      {
+        "cor": "azul",
+        "url": "https://imgnike-a.akamaihd.net/768x768/0243487T.jpg"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "nome": "Tênis Nike Air Max Plus",
+    "genero": "Masculino",
+    "preco": 1199.99,
+    "tamanhos": [40, 43],
+    "imagens": [
+      {
+        "cor": "amarelo",
+        "url": "https://imgnike-a.akamaihd.net/768x768/024347ID.jpg"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "nome": "Tênis Nike Air Max 90 SE",
+    "genero": "Masculino",
+    "preco": 549.99,
+    "tamanhos": [39],
+    "imagens": [
+      {
+        "cor": "preto",
+        "url": "https://imgnike-a.akamaihd.net/768x768/014974ID.jpg"
+      }
+    ]
+  }
+]
