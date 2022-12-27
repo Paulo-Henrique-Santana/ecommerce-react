@@ -71,5 +71,18 @@
         "url": "https://imgnike-a.akamaihd.net/768x768/014974ID.jpg"
       }
     ]
+  },
+  {
+    "id": 6,
+    "nome": "Tênis Nike Air Max Plus",
+    "genero": "Feminino",
+    "preco": 1139.99,
+    "tamanhos": [35, 36, 37],
+    "imagens": [
+      {
+        "cor": "rosa",
+        "url": "https://imgnike-a.akamaihd.net/768x768/024169ID.jpg"
+      }
+    ]
   }
 ]

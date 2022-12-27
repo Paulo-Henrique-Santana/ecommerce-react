@@ -1,7 +1,7 @@
 import React from "react";
 import Filters from "../Filters/Filters";
 import Products from "../Products/Products";
-import * as L from "./styles";
+import { StyledMain } from "./styles";
 
 const Main = () => {
   const [sizes, setSizes] = React.useState([]);
@@ -22,10 +22,10 @@ const Main = () => {
   };
 
   return (
-    <L.StyledMain>
+    <StyledMain>
       <Filters selectSize={selectSize} selectGender={selectGender} />
       <Products sizes={sizes} genders={genders} />
-    </L.StyledMain>
+    </StyledMain>
   );
 };
 

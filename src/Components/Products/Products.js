@@ -4,32 +4,30 @@ import ProductsContainer from "./styles";
 
 const Products = ({ sizes, genders }) => {
   const [shoes, setShoes] = React.useState(null);
-  // const [msg, setMsg] = React.useState("");
 
   React.useEffect(() => {
     const fetchData = async (url) => {
       const response = await fetch(url);
-      const json = await response.json();
+      let json = await response.json();
+
+      if (sizes.length) {
+        json = json.filter((shoe) =>
+          shoe.tamanhos.some((n) => sizes.includes(n))
+        );
+      }
+      if (genders.length) {
+        json = json.filter((shoe) => genders.includes(shoe.genero));
+      }
       setShoes(json);
     };
     fetchData("./products.json");
-  }, []);
+  }, [sizes, genders]);
 
-  const filter = () => {
-    let filtered;
-    if (sizes.length) {
-      filtered = shoes.map((shoe) => {
-        if (shoe.tamanhos.some((n) => sizes.includes(n)))
-          return <CardShoe key={shoe.id} shoe={shoe} />;
-      });
-    }
-    if (genders.length > 0) {
-    }
-    if (filtered) return filtered;
-    else return shoes.map((shoe) => <CardShoe key={shoe.id} shoe={shoe} />);
-  };
-
-  return <ProductsContainer>{shoes && filter()}</ProductsContainer>;
+  return (
+    <ProductsContainer>
+      {shoes && shoes.map((shoe) => <CardShoe key={shoe.id} shoe={shoe} />)}
+    </ProductsContainer>
+  );
 };
 
 export default Products;

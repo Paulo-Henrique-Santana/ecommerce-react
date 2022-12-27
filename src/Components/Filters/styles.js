@@ -14,6 +14,9 @@ export const StyledFilters = styled.div`
   ul li {
     cursor: pointer;
   }
+  .selected {
+    border: 1px solid blue;
+  }
 `;
 
 export const Sizes = styled.div`
@@ -30,9 +33,6 @@ export const Sizes = styled.div`
     border-radius: 3px;
     width: 40px;
     height: 40px;
-  }
-  ul li.selected {
-    border-color: blue;
   }
 `;
 
