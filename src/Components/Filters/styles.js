@@ -1,9 +1,19 @@
 import styled from "styled-components";
 
 export const StyledFilters = styled.div`
+  justify-self: center;
   max-width: 200px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  h2 {
+    margin-bottom: 15px;
+  }
+  ul {
+    margin-bottom: 30px;
+  }
+  ul li {
+    cursor: pointer;
+  }
 `;
 
 export const Sizes = styled.div`
@@ -20,5 +30,14 @@ export const Sizes = styled.div`
     border-radius: 3px;
     width: 40px;
     height: 40px;
+  }
+  ul li.selected {
+    border-color: blue;
+  }
+`;
+
+export const Prices = styled.div`
+  ul li {
+    margin-bottom: 10px;
   }
 `;

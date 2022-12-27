@@ -1,32 +1,46 @@
 import React from "react";
-import * as L from "./styles";
+import { Prices, Sizes, StyledFilters } from "./styles";
 
-const Filters = () => {
+const Filters = ({ selectSize, selectGender }) => {
+  const sizes = [
+    30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46,
+  ];
+  const genders = ["Masculino", "Feminino", "Unissex"];
+
   return (
-    <L.StyledFilters>
-      <L.Sizes>
+    <StyledFilters>
+      <Sizes>
         <h2>Tamanho</h2>
         <ul>
-          <li>30</li>
-          <li>31</li>
-          <li>32</li>
-          <li>33</li>
-          <li>34</li>
-          <li>35</li>
-          <li>36</li>
-          <li>37</li>
-          <li>38</li>
-          <li>39</li>
-          <li>40</li>
-          <li>41</li>
-          <li>42</li>
-          <li>43</li>
-          <li>44</li>
-          <li>45</li>
-          <li>46</li>
+          {sizes.map((size, index) => (
+            <li key={index} onClick={selectSize}>
+              {size}
+            </li>
+          ))}
         </ul>
-      </L.Sizes>
-    </L.StyledFilters>
+      </Sizes>
+      <Prices>
+        <h2>Preço</h2>
+        <ul>
+          <li>Menos de R$ 500</li>
+          <li>R$ 500 - R$ 600</li>
+          <li>R$ 600 - R$ 700</li>
+          <li>R$ 700 - R$ 800</li>
+          <li>R$ 900 - R$ 1000</li>
+          <li>Acima de R$ 1000</li>
+        </ul>
+      </Prices>
+      <Prices>
+        <h2>Gênero</h2>
+        <ul>
+          {genders.map((gender, index) => (
+            <li key={index} onClick={selectGender}>
+              {gender}
+            </li>
+          ))}
+        </ul>
+      </Prices>
+    </StyledFilters>
   );
 };
 

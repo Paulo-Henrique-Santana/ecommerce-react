@@ -1,12 +1,12 @@
 import React from "react";
 import * as L from "./styles";
 
-const CardProduct = ({ data }) => {
+const CardProduct = ({ shoe }) => {
   return (
     <L.StyledCardProduct>
-      <img src={data.imagens[0].url} alt="" />
-      <L.Name>{data.nome}</L.Name>
-      <p>{data.preco}</p>
+      <img src={shoe.imagens[0].url} alt="" />
+      <L.Name>{shoe.nome}</L.Name>
+      <p>{shoe.preco}</p>
     </L.StyledCardProduct>
   );
 };
