@@ -2,8 +2,9 @@ import styled from "styled-components";
 
 export const StyledMain = styled.main`
   display: grid;
-  grid-template-columns: auto 1000px;
-  gap: 50px;
+  grid-template-columns: max-content minmax(auto, 940px);
+  gap: 75px;
   margin: 50px auto;
-  max-width: 1440px;
+  max-width: max-content;
+  height: 800px;
 `;

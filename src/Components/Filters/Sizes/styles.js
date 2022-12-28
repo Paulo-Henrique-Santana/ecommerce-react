@@ -11,10 +11,15 @@ export const StyledSizes = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid black;
+    border: 1px solid #6c757d;
+    outline: 1px solid transparent;
     border-radius: 3px;
     width: 40px;
     height: 40px;
     cursor: pointer;
+    &.selected {
+      border-color: black;
+      outline-color: black;
+    }
   }
 `;

@@ -1,15 +1,15 @@
 import React from "react";
+import FiltersListItem from "../FiltersListItem/FiltersListItem";
 import { H2, Ul } from "../styles";
 
 const Genders = ({ shoes, setSelectedGenders }) => {
   const genders = [...new Set(shoes.map((shoe) => shoe.genero))];
 
-  const selectGender = ({ target }) => {
-    target.classList.toggle("selected");
+  const selectGender = ({ currentTarget }) => {
     setSelectedGenders((prev) =>
-      prev.includes(target.innerText)
-        ? prev.filter((value) => value !== target.innerText)
-        : [...prev, target.innerText]
+      prev.includes(currentTarget.innerText)
+        ? prev.filter((value) => value !== currentTarget.innerText)
+        : [...prev, currentTarget.innerText]
     );
   };
 
@@ -18,9 +18,9 @@ const Genders = ({ shoes, setSelectedGenders }) => {
       <H2>Gênero</H2>
       <Ul>
         {genders.map((gender, index) => (
-          <li key={index} onClick={selectGender}>
+          <FiltersListItem key={index} selectItem={selectGender}>
             {gender}
-          </li>
+          </FiltersListItem>
         ))}
       </Ul>
     </div>

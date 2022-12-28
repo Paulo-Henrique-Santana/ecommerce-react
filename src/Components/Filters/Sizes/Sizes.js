@@ -22,7 +22,7 @@ const Sizes = ({ shoes, setSelectedSizes }) => {
     <StyledSizes>
       <H2>Tamanho</H2>
       <ul>
-        {sizes.map((size, index) => (
+        {sizes.sort().map((size, index) => (
           <li key={index} onClick={selectSize}>
             {size}
           </li>
