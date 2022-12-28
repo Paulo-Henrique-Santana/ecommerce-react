@@ -7,7 +7,7 @@ const Main = () => {
   const [shoes, setShoes] = React.useState(null);
   const [selectedSizes, setSelectedSizes] = React.useState([]);
   const [selectedGenders, setSelectedGenders] = React.useState([]);
-  console.log(selectedSizes);
+  const [selectedPrices, setSelectedPrices] = React.useState([]);
 
   React.useEffect(() => {
     const fetchShoes = async (url) => {
@@ -18,18 +18,21 @@ const Main = () => {
     fetchShoes("./products.json");
   }, []);
 
-  if (shoes === null) return null;
   return (
     <StyledMain>
-      <Filters
-        shoes={shoes}
-        setSelectedSizes={setSelectedSizes}
-        setSelectedGenders={setSelectedGenders}
-      />
+      {shoes && (
+        <Filters
+          shoes={shoes}
+          setSelectedSizes={setSelectedSizes}
+          setSelectedGenders={setSelectedGenders}
+          setSelectedPrices={setSelectedPrices}
+        />
+      )}
       <Products
         shoes={shoes}
         selectedSizes={selectedSizes}
         selectedGenders={selectedGenders}
+        selectedPrices={selectedPrices}
       />
     </StyledMain>
   );
