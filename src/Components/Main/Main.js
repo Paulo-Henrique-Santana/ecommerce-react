@@ -1,30 +1,36 @@
 import React from "react";
-import Filters from "../Filters/Filters";
+import Filters from "../Filters/FiltersMenu/Filters";
 import Products from "../Products/Products";
 import { StyledMain } from "./styles";
 
 const Main = () => {
-  const [sizes, setSizes] = React.useState([]);
-  const [genders, setGenders] = React.useState([]);
+  const [shoes, setShoes] = React.useState(null);
+  const [selectedSizes, setSelectedSizes] = React.useState([]);
+  const [selectedGenders, setSelectedGenders] = React.useState([]);
+  console.log(selectedSizes);
 
-  const selectSize = ({ target }) => {
-    target.classList.toggle("selected");
-    const size = Number(target.innerText);
-    if (sizes.includes(size)) setSizes(sizes.filter((value) => value !== size));
-    else setSizes([...sizes, size]);
-  };
+  React.useEffect(() => {
+    const fetchShoes = async (url) => {
+      const response = await fetch(url);
+      const json = await response.json();
+      setShoes(json);
+    };
+    fetchShoes("./products.json");
+  }, []);
 
-  const selectGender = ({ target }) => {
-    target.classList.toggle("selected");
-    if (genders.includes(target.innerText))
-      setGenders(genders.filter((value) => value !== target.innerText));
-    else setGenders([...genders, target.innerText]);
-  };
-
+  if (shoes === null) return null;
   return (
     <StyledMain>
-      <Filters selectSize={selectSize} selectGender={selectGender} />
-      <Products sizes={sizes} genders={genders} />
+      <Filters
+        shoes={shoes}
+        setSelectedSizes={setSelectedSizes}
+        setSelectedGenders={setSelectedGenders}
+      />
+      <Products
+        shoes={shoes}
+        selectedSizes={selectedSizes}
+        selectedGenders={selectedGenders}
+      />
     </StyledMain>
   );
 };

@@ -1,43 +1,16 @@
 import styled from "styled-components";
 
-export const StyledFilters = styled.div`
-  justify-self: center;
-  max-width: 200px;
-  display: flex;
-  flex-direction: column;
-  h2 {
-    margin-bottom: 15px;
-  }
-  ul {
-    margin-bottom: 30px;
-  }
-  ul li {
+export const H2 = styled.h2`
+  margin-bottom: 15px;
+`;
+
+export const Ul = styled.ul`
+  margin-bottom: 30px;
+  li {
     cursor: pointer;
+    margin-bottom: 7px;
   }
-  .selected {
+  li.selected {
     border: 1px solid blue;
-  }
-`;
-
-export const Sizes = styled.div`
-  ul {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-  }
-  ul li {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid black;
-    border-radius: 3px;
-    width: 40px;
-    height: 40px;
-  }
-`;
-
-export const Prices = styled.div`
-  ul li {
-    margin-bottom: 10px;
   }
 `;
