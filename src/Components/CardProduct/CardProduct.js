@@ -1,13 +1,14 @@
 import React from "react";
-import * as L from "./styles";
+import { Link } from "react-router-dom";
+import { Name } from "./styles";
 
 const CardProduct = ({ shoe }) => {
   return (
-    <L.StyledCardProduct>
+    <Link to={`product/${shoe.id}`}>
       <img src={shoe.imagens[0].url} alt="" />
-      <L.Name>{shoe.nome}</L.Name>
+      <Name>{shoe.nome}</Name>
       <p>{shoe.preco}</p>
-    </L.StyledCardProduct>
+    </Link>
   );
 };
 

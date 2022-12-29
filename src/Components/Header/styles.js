@@ -6,6 +6,7 @@ const StyledHeader = styled.header`
   align-items: center;
   padding: 25px 50px;
   background-color: #f7f7f7;
+  width: 100%;
 
   input[type="text"] {
     display: inline-block;

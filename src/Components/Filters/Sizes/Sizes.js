@@ -1,6 +1,6 @@
 import React from "react";
 import { H2 } from "../styles";
-import { StyledSizes } from "./styles";
+import { SizeList } from "./styles";
 
 const Sizes = ({ shoes, setSelectedSizes }) => {
   let sizes = [];
@@ -19,16 +19,16 @@ const Sizes = ({ shoes, setSelectedSizes }) => {
   };
 
   return (
-    <StyledSizes>
+    <div>
       <H2>Tamanho</H2>
-      <ul>
+      <SizeList>
         {sizes.sort().map((size, index) => (
           <li key={index} onClick={selectSize}>
             {size}
           </li>
         ))}
-      </ul>
-    </StyledSizes>
+      </SizeList>
+    </div>
   );
 };
 

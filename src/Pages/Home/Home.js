@@ -1,9 +1,9 @@
 import React from "react";
-import Filters from "../Filters/FiltersMenu/Filters";
-import Products from "../Products/Products";
-import { StyledMain } from "./styles";
+import Filters from "../../Components/Filters/FiltersMenu/Filters";
+import Products from "../../Components/Products/Products";
+import { StyledHome } from "./styles";
 
-const Main = () => {
+const Home = () => {
   const [shoes, setShoes] = React.useState(null);
   const [selectedSizes, setSelectedSizes] = React.useState([]);
   const [selectedGenders, setSelectedGenders] = React.useState([]);
@@ -19,7 +19,7 @@ const Main = () => {
   }, []);
 
   return (
-    <StyledMain>
+    <StyledHome>
       {shoes && (
         <Filters
           shoes={shoes}
@@ -34,8 +34,8 @@ const Main = () => {
         selectedGenders={selectedGenders}
         selectedPrices={selectedPrices}
       />
-    </StyledMain>
+    </StyledHome>
   );
 };
 
-export default Main;
+export default Home;

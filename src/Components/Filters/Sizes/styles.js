@@ -1,13 +1,12 @@
 import styled from "styled-components";
 
-export const StyledSizes = styled.div`
-  ul {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-    margin-bottom: 30px;
-  }
-  ul li {
+export const SizeList = styled.ul`
+  display: flex;
+  flex-wrap: wrap;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 30px;
+  li {
     display: flex;
     justify-content: center;
     align-items: center;
