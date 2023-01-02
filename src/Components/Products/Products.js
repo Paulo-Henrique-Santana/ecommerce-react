@@ -1,6 +1,6 @@
 import React from "react";
 import CardShoe from "../CardProduct/CardProduct";
-import ProductsContainer from "./styles";
+import { Msg, ProductsContainer } from "./styles";
 
 const Products = ({
   shoes,
@@ -41,6 +41,9 @@ const Products = ({
     <ProductsContainer>
       {filtered &&
         filtered.map((shoe) => <CardShoe key={shoe.id} shoe={shoe} />)}
+      {(!filtered || !filtered.length) && (
+        <Msg>Nenhum produto foi encontrado</Msg>
+      )}
     </ProductsContainer>
   );
 };

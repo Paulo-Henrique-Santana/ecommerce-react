@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
-const ProductsContainer = styled.div`
+export const ProductsContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px 20px;
-  height: max-content;
+  position: relative;
   @media (max-width: 768px) {
     grid-template-columns: 1fr 1fr;
   }
@@ -13,4 +13,10 @@ const ProductsContainer = styled.div`
   }
 `;
 
-export default ProductsContainer;
+export const Msg = styled.p`
+  width: max-content;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+`;
