@@ -1,19 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import StyledHeader from "./styles";
+import { Links, Search, StyledHeader, Title } from "./styles";
 
 const Header = () => {
   return (
     <StyledHeader>
       <Link to="/">
-        <h1>E-Shoes</h1>
+        <Title>E-Shoes</Title>
       </Link>
-      <input type="text" />
-      <div>
-        <button>Login</button>
+      <Search placeholder="O que você está procurando?" type="text" />
+      <Links>
         <button>Favoritos</button>
         <button>Carrinho</button>
-      </div>
+      </Links>
     </StyledHeader>
   );
 };

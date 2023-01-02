@@ -39,32 +39,32 @@ const Product = () => {
     target.classList.add("selected");
   };
 
-  if (shoe)
-    return (
-      <Main>
-        <img src={imgSrc} alt={shoe.nome} />
-        <Infos>
-          <Name>{shoe.nome}</Name>
-          <Price>R$ {shoe.preco}</Price>
-          <DivImages ref={images}>
-            {shoe.imagens.map((img, index) => (
-              <div key={index} onClick={selectColor}>
-                <img src={img.url} alt={`${shoe.nome} ${img.cor}`} />
-              </div>
-            ))}
-          </DivImages>
-          <h2>Tamanhos</h2>
-          <Sizes>
-            {shoe.tamanhos.map((n) => (
-              <li key={n} onClick={selectSize}>
-                {n}
-              </li>
-            ))}
-          </Sizes>
-          <Button>Comprar</Button>
-        </Infos>
-      </Main>
-    );
+  if (!shoe) return <Main></Main>;
+  return (
+    <Main>
+      <img src={imgSrc} alt={shoe.nome} />
+      <Infos>
+        <Name>{shoe.nome}</Name>
+        <Price>R$ {shoe.preco}</Price>
+        <DivImages ref={images}>
+          {shoe.imagens.map((img, index) => (
+            <div key={index} onClick={selectColor}>
+              <img src={img.url} alt={`${shoe.nome} ${img.cor}`} />
+            </div>
+          ))}
+        </DivImages>
+        <h2>Tamanhos</h2>
+        <Sizes>
+          {shoe.tamanhos.map((n) => (
+            <li key={n} onClick={selectSize}>
+              {n}
+            </li>
+          ))}
+        </Sizes>
+        <Button>Comprar</Button>
+      </Infos>
+    </Main>
+  );
 };
 
 export default Product;

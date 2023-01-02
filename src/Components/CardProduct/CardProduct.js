@@ -7,7 +7,12 @@ const CardProduct = ({ shoe }) => {
     <Link to={`product/${shoe.id}`}>
       <img src={shoe.imagens[0].url} alt="" />
       <Name>{shoe.nome}</Name>
-      <p>{shoe.preco}</p>
+      <p>
+        {shoe.preco.toLocaleString("pt-BR", {
+          style: "currency",
+          currency: "BRL",
+        })}
+      </p>
     </Link>
   );
 };

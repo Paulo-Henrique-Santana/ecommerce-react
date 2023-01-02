@@ -3,10 +3,11 @@ import { SizeList } from "../../Components/Filters/Sizes/styles";
 
 export const Main = styled.main`
   display: grid;
-  grid-template-columns: minmax(460px, 700px) minmax(auto, 400px);
+  grid-template-columns: minmax(450px, 700px) minmax(auto, 400px);
   gap: 50px;
-  margin: 75px 15px;
+  margin: 0 15px;
   max-width: max-content;
+  min-height: 700px;
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
   }
@@ -62,6 +63,7 @@ export const Button = styled.button`
   margin: 0 auto;
   border: none;
   border-radius: 4px;
+  min-width: 250px;
   width: 100%;
   max-width: 300px;
   height: 50px;
