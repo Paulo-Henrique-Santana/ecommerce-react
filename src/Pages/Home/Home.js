@@ -1,5 +1,5 @@
 import React from "react";
-import Filters from "../../Components/Filters/FiltersMenu/Filters";
+import FiltersMenu from "../../Components/Filters/FiltersMenu/FiltersMenu";
 import Products from "../../Components/Products/Products";
 import { StyledHome } from "./styles";
 
@@ -21,7 +21,7 @@ const Home = () => {
   return (
     <StyledHome>
       {shoes && (
-        <Filters
+        <FiltersMenu
           shoes={shoes}
           setSelectedSizes={setSelectedSizes}
           setSelectedGenders={setSelectedGenders}

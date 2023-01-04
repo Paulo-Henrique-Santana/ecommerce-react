@@ -10,10 +10,15 @@ const GlobalStyle = createGlobalStyle`
     font-family: Arial, Helvetica, sans-serif;
   }
 
+  body {
+    overflow-y: scroll;
+  }
+
   #root {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
   }
 
   ul {

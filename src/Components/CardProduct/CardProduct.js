@@ -1,10 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { Name } from "./styles";
+import { Name, Product } from "./styles";
 
 const CardProduct = ({ shoe }) => {
   return (
-    <Link to={`product/${shoe.id}`}>
+    <Product to={`product/${shoe.id}`}>
       <img src={shoe.imagens[0].url} alt="" />
       <Name>{shoe.nome}</Name>
       <p>
@@ -13,7 +12,7 @@ const CardProduct = ({ shoe }) => {
           currency: "BRL",
         })}
       </p>
-    </Link>
+    </Product>
   );
 };
 

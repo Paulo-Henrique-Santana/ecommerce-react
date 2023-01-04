@@ -1,5 +1,5 @@
 import React from "react";
-import Checkbox from "../../Svg/Checkbox";
+import Checkbox from "../../Svg/CheckboxSVG";
 
 const FiltersListItem = ({ children, selectItem, id }) => {
   const [active, setActive] = React.useState(false);

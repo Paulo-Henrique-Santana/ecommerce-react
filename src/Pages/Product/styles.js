@@ -23,6 +23,9 @@ export const Infos = styled.div`
 
 export const Name = styled.h1`
   margin-bottom: 20px;
+  @media (max-width: 768px) {
+    text-align: center;
+  }
 `;
 
 export const Price = styled.p`

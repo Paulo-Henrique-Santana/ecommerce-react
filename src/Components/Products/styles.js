@@ -5,7 +5,7 @@ export const ProductsContainer = styled.div`
   grid-template-columns: repeat(3, 1fr);
   gap: 30px 20px;
   position: relative;
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     grid-template-columns: 1fr 1fr;
   }
   @media (max-width: 450px) {

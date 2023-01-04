@@ -41,7 +41,7 @@ const Products = ({
     <ProductsContainer>
       {filtered &&
         filtered.map((shoe) => <CardShoe key={shoe.id} shoe={shoe} />)}
-      {(!filtered || !filtered.length) && (
+      {shoes && (!filtered || !filtered.length) && (
         <Msg>Nenhum produto foi encontrado</Msg>
       )}
     </ProductsContainer>

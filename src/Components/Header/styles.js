@@ -15,6 +15,7 @@ export const StyledHeader = styled.header`
     grid-template-rows: 1fr 1fr;
     padding-left: 15px;
     padding-right: 15px;
+    margin-bottom: 25px;
   }
 `;
 
