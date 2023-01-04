@@ -15,9 +15,8 @@ const Products = ({
     let wait = false;
     function infiniteScroll() {
       if (filtered && numberShoes < filtered.length) {
-        const scroll = window.scrollY;
         const height = document.body.offsetHeight - window.innerHeight;
-        if (scroll > height * 0.75 && !wait) {
+        if (window.scrollY > height * 0.75 && !wait) {
           setNumberShoes(numberShoes + 6);
           wait = true;
           setTimeout(() => {
@@ -36,14 +35,15 @@ const Products = ({
 
   React.useEffect(() => {
     setFiltered(shoes);
-    if (selectedSizes.length) {
+    if (selectedSizes.length)
       setFiltered((prev) =>
-        prev.filter((shoe) =>
-          shoe.tamanhos.some((n) => selectedSizes.includes(n))
+        prev.filter(({ cores }) =>
+          cores.some(({ tamanhos }) =>
+            tamanhos.some((n) => selectedSizes.includes(n))
+          )
         )
       );
-    }
-    if (selectedPrices.length) {
+    if (selectedPrices.length)
       setFiltered((prev) =>
         prev.filter((shoe) =>
           selectedPrices.some((n) =>
@@ -53,12 +53,10 @@ const Products = ({
           )
         )
       );
-    }
-    if (selectedGenders.length) {
+    if (selectedGenders.length)
       setFiltered((prev) =>
         prev.filter((shoe) => selectedGenders.includes(shoe.genero))
       );
-    }
   }, [shoes, selectedSizes, selectedPrices, selectedGenders]);
 
   return (

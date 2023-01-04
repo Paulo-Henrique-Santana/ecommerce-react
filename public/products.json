@@ -4,18 +4,17 @@
     "nome": "Tênis Nike Air Max TW",
     "genero": "Masculino",
     "preco": 1299.99,
-    "tamanhos": [37, 38, 40, 42, 43, 44, 45],
-    "imagens": [
+    "cores": [
       {
-        "cor": "azul",
+        "tamanhos": [37, 40, 42, 43, 45],
         "url": "https://imgnike-a.akamaihd.net/768x768/02434651.jpg"
       },
       {
-        "cor": "vermelho",
+        "tamanhos": [37, 38, 40, 42, 43, 44, 45],
         "url": "https://imgnike-a.akamaihd.net/768x768/0243467T.jpg"
       },
       {
-        "cor": "preto",
+        "tamanhos": [44, 45],
         "url": "https://imgnike-a.akamaihd.net/768x768/024346ID.jpg"
       }
     ]
@@ -25,10 +24,9 @@
     "nome": "Tênis Nike Air Force 1 \"07 LV8 Next Nature",
     "genero": "Masculino",
     "preco": 899.99,
-    "tamanhos": [37, 38, 44, 45, 46],
-    "imagens": [
+    "cores": [
       {
-        "cor": "cinza",
+        "tamanhos": [37, 38, 44, 45, 46],
         "url": "https://imgnike-a.akamaihd.net/768x768/0223177T.jpg"
       }
     ]
@@ -38,10 +36,9 @@
     "nome": "Tênis Nike Air Max Plus SE",
     "genero": "Masculino",
     "preco": 1499.99,
-    "tamanhos": [42, 43, 45, 46],
-    "imagens": [
+    "cores": [
       {
-        "cor": "azul",
+        "tamanhos": [42, 43, 45, 46],
         "url": "https://imgnike-a.akamaihd.net/768x768/0243487T.jpg"
       }
     ]
@@ -51,10 +48,9 @@
     "nome": "Tênis Nike Air Max Plus",
     "genero": "Masculino",
     "preco": 1199.99,
-    "tamanhos": [40, 43],
-    "imagens": [
+    "cores": [
       {
-        "cor": "amarelo",
+        "tamanhos": [40, 43],
         "url": "https://imgnike-a.akamaihd.net/768x768/024347ID.jpg"
       }
     ]
@@ -64,10 +60,9 @@
     "nome": "Tênis Nike Air Max 90 SE",
     "genero": "Masculino",
     "preco": 549.99,
-    "tamanhos": [39],
-    "imagens": [
+    "cores": [
       {
-        "cor": "preto",
+        "tamanhos": [39],
         "url": "https://imgnike-a.akamaihd.net/768x768/014974ID.jpg"
       }
     ]
@@ -77,10 +72,9 @@
     "nome": "Tênis Nike Air Max Plus",
     "genero": "Feminino",
     "preco": 1139.99,
-    "tamanhos": [35, 36, 37],
-    "imagens": [
+    "cores": [
       {
-        "cor": "rosa",
+        "tamanhos": [35, 36, 37],
         "url": "https://imgnike-a.akamaihd.net/768x768/024169ID.jpg"
       }
     ]
@@ -90,10 +84,9 @@
     "nome": "Tênis Nike Air Force 1 '07 SE",
     "genero": "Feminino",
     "preco": 899.99,
-    "tamanhos": [35, 36, 37, 38, 39, 40, 41],
-    "imagens": [
+    "cores": [
       {
-        "cor": "cinza",
+        "tamanhos": [35, 36, 37, 38, 39, 40, 41],
         "url": "https://imgnike-a.akamaihd.net/768x768/0241197T.jpg"
       }
     ]
@@ -103,10 +96,9 @@
     "nome": "Tênis Nike Air Force 1 '07 LXX",
     "genero": "Feminino",
     "preco": 669.99,
-    "tamanhos": [35, 36, 38, 39],
-    "imagens": [
+    "cores": [
       {
-        "cor": "bege",
+        "tamanhos": [35, 36, 38, 39],
         "url": "https://imgnike-a.akamaihd.net/768x768/0172003X.jpg"
       }
     ]
@@ -116,10 +108,9 @@
     "nome": "Tênis Nike Air Max 90 EWT",
     "genero": "Feminino",
     "preco": 999.99,
-    "tamanhos": [35, 36, 37],
-    "imagens": [
+    "cores": [
       {
-        "cor": "branco",
+        "tamanhos": [35, 36, 37],
         "url": "https://imgnike-a.akamaihd.net/768x768/02409451.jpg"
       }
     ]
@@ -129,10 +120,9 @@
     "nome": "Tênis Nike Sportswear Air Max 96 2",
     "genero": "Feminino",
     "preco": 659.99,
-    "tamanhos": [37],
-    "imagens": [
+    "cores": [
       {
-        "cor": "branco",
+        "tamanhos": [37],
         "url": "https://imgnike-a.akamaihd.net/768x768/01448751.jpg"
       }
     ]
@@ -142,14 +132,13 @@
     "nome": "Tênis Nike Air Max 90 Toggle",
     "genero": "Infantil",
     "preco": 589.99,
-    "tamanhos": [27, 28, 29, 30, 31, 32],
-    "imagens": [
+    "cores": [
       {
-        "cor": "branco",
+        "tamanhos": [27, 28, 29, 30, 31, 32],
         "url": "https://imgnike-a.akamaihd.net/768x768/0106035L.jpg"
       },
       {
-        "cor": "cinza",
+        "tamanhos": [32],
         "url": "https://imgnike-a.akamaihd.net/768x768/0106037T.jpg"
       }
     ]
@@ -159,10 +148,9 @@
     "nome": "Air Jordan 4 Midnight Navy",
     "genero": "Unissex",
     "preco": 1699.99,
-    "tamanhos": [45],
-    "imagens": [
+    "cores": [
       {
-        "cor": "branco",
+        "tamanhos": [45],
         "url": "https://imgnike-a.akamaihd.net/768x768/02449651.jpg"
       }
     ]

@@ -4,7 +4,7 @@ import { Name, Product } from "./styles";
 const CardProduct = ({ shoe }) => {
   return (
     <Product to={`product/${shoe.id}`}>
-      <img src={shoe.imagens[0].url} alt="" />
+      <img src={shoe.cores[0].url} alt={shoe.nome} />
       <Name>{shoe.nome}</Name>
       <p>
         {shoe.preco.toLocaleString("pt-BR", {
