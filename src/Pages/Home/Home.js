@@ -13,6 +13,10 @@ const Home = () => {
     const fetchShoes = async (url) => {
       const response = await fetch(url);
       const json = await response.json();
+      for (let i = json.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [json[i], json[j]] = [json[j], json[i]];
+      }
       setShoes(json);
     };
     fetchShoes("./products.json");

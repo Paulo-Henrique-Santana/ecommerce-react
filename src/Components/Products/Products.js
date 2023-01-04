@@ -9,6 +9,30 @@ const Products = ({
   selectedGenders,
 }) => {
   const [filtered, setFiltered] = React.useState(null);
+  const [numberShoes, setNumberShoes] = React.useState(6);
+
+  React.useEffect(() => {
+    let wait = false;
+    function infiniteScroll() {
+      if (filtered && numberShoes < filtered.length) {
+        const scroll = window.scrollY;
+        const height = document.body.offsetHeight - window.innerHeight;
+        if (scroll > height * 0.75 && !wait) {
+          setNumberShoes(numberShoes + 6);
+          wait = true;
+          setTimeout(() => {
+            wait = false;
+          }, 500);
+        }
+      }
+    }
+    window.addEventListener("wheel", infiniteScroll);
+    window.addEventListener("click", infiniteScroll);
+    return () => {
+      window.removeEventListener("wheel", infiniteScroll);
+      window.removeEventListener("click", infiniteScroll);
+    };
+  }, [numberShoes, filtered]);
 
   React.useEffect(() => {
     setFiltered(shoes);
@@ -40,7 +64,9 @@ const Products = ({
   return (
     <ProductsContainer>
       {filtered &&
-        filtered.map((shoe) => <CardShoe key={shoe.id} shoe={shoe} />)}
+        filtered
+          .slice(0, numberShoes)
+          .map((shoe) => <CardShoe key={shoe.id} shoe={shoe} />)}
       {shoes && (!filtered || !filtered.length) && (
         <Msg>Nenhum produto foi encontrado</Msg>
       )}

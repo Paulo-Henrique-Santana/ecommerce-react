@@ -84,5 +84,87 @@
         "url": "https://imgnike-a.akamaihd.net/768x768/024169ID.jpg"
       }
     ]
+  },
+  {
+    "id": 7,
+    "nome": "Tênis Nike Air Force 1 '07 SE",
+    "genero": "Feminino",
+    "preco": 899.99,
+    "tamanhos": [35, 36, 37, 38, 39, 40, 41],
+    "imagens": [
+      {
+        "cor": "cinza",
+        "url": "https://imgnike-a.akamaihd.net/768x768/0241197T.jpg"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "nome": "Tênis Nike Air Force 1 '07 LXX",
+    "genero": "Feminino",
+    "preco": 669.99,
+    "tamanhos": [35, 36, 38, 39],
+    "imagens": [
+      {
+        "cor": "bege",
+        "url": "https://imgnike-a.akamaihd.net/768x768/0172003X.jpg"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "nome": "Tênis Nike Air Max 90 EWT",
+    "genero": "Feminino",
+    "preco": 999.99,
+    "tamanhos": [35, 36, 37],
+    "imagens": [
+      {
+        "cor": "branco",
+        "url": "https://imgnike-a.akamaihd.net/768x768/02409451.jpg"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "nome": "Tênis Nike Sportswear Air Max 96 2",
+    "genero": "Feminino",
+    "preco": 659.99,
+    "tamanhos": [37],
+    "imagens": [
+      {
+        "cor": "branco",
+        "url": "https://imgnike-a.akamaihd.net/768x768/01448751.jpg"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "nome": "Tênis Nike Air Max 90 Toggle",
+    "genero": "Infantil",
+    "preco": 589.99,
+    "tamanhos": [27, 28, 29, 30, 31, 32],
+    "imagens": [
+      {
+        "cor": "branco",
+        "url": "https://imgnike-a.akamaihd.net/768x768/0106035L.jpg"
+      },
+      {
+        "cor": "cinza",
+        "url": "https://imgnike-a.akamaihd.net/768x768/0106037T.jpg"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "nome": "Air Jordan 4 Midnight Navy",
+    "genero": "Unissex",
+    "preco": 1699.99,
+    "tamanhos": [45],
+    "imagens": [
+      {
+        "cor": "branco",
+        "url": "https://imgnike-a.akamaihd.net/768x768/02449651.jpg"
+      }
+    ]
   }
 ]

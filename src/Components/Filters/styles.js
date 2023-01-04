@@ -14,8 +14,9 @@ export const Ul = styled.ul`
     display: flex;
     align-items: center;
     gap: 5px;
-    cursor: pointer;
     margin-bottom: 7px;
+    width: max-content;
+    cursor: pointer;
   }
   li span {
     margin-top: 1px;
