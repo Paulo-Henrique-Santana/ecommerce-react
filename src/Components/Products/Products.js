@@ -11,7 +11,7 @@ const Products = ({
 }) => {
   const [filtered, setFiltered] = React.useState(null);
   const [numberShoes, setNumberShoes] = React.useState(9);
-  const { favoritesId, addFavorite, removeFavorite } = useFavoritesId();
+  const { favoritesId, toggleFavorite } = useFavoritesId();
 
   React.useEffect(() => {
     let wait = false;
@@ -72,8 +72,7 @@ const Products = ({
               shoe={shoe}
               dataId={shoe.id}
               favorite={favoritesId.includes(shoe.id)}
-              addFavorite={addFavorite}
-              removeFavorite={removeFavorite}
+              toggleFavorite={toggleFavorite}
             />
           ))}
       {shoes && (!filtered || !filtered.length) && (

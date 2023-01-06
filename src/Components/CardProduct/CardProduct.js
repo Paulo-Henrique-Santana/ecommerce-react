@@ -2,21 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Favorite, Name, Product } from "./styles";
 
-const CardProduct = ({
-  dataId,
-  shoe,
-  favorite,
-  addFavorite,
-  removeFavorite,
-}) => {
-  const handleClickFavorite = () => {
-    if (favorite) removeFavorite(dataId);
-    else addFavorite(dataId);
-  };
-
+const CardProduct = ({ dataId, shoe, favorite, toggleFavorite }) => {
   return (
     <Product>
-      <Favorite onClick={handleClickFavorite} active={favorite} />
+      <Favorite onClick={() => toggleFavorite(dataId)} active={favorite} />
       <Link to={`/product/${shoe.id}`}>
         <img src={shoe.cores[0].url} alt={shoe.nome} />
         <Name>{shoe.nome}</Name>

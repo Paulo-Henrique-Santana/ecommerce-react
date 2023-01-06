@@ -1,13 +1,11 @@
 import styled from "styled-components";
-import FavoriteSVG from "../Svg/FavoriteSVG";
+import FavoriteSVG from "../SVG/FavoriteSVG";
 
 export const Product = styled.div`
   height: max-content;
   position: relative;
   user-select: none;
 `;
-
-// export const BgFavorite = styled.span``;
 
 export const Favorite = styled(FavoriteSVG)`
   height: 40px;
@@ -18,7 +16,7 @@ export const Favorite = styled(FavoriteSVG)`
   cursor: pointer;
   path {
     transition: fill 0.3s;
-    fill-opacity: ${({ active }) => (active ? "1" : "0.4")};
+    fill-opacity: ${({ active }) => (active ? "1" : "0.2")};
     fill: ${({ active }) => (active ? "#ef233c" : "transparent")};
     stroke: ${({ active }) => (active ? "#ef233c" : "#000000")};
     stroke-width: 1.5;

@@ -1,18 +1,20 @@
 import React from "react";
 import { useParams } from "react-router-dom";
+import useFavoritesId from "../../Hooks/useFavoritesId";
 import { ShoesContext } from "../../ShoesContext";
-import { Button, DivImages, Infos, Main, Name, Price, Sizes } from "./styles";
+import * as S from "./styles";
 
 const Product = () => {
   const { shoes } = React.useContext(ShoesContext);
   const [shoe, setShoe] = React.useState(null);
   const [imgSrc, setImgSrc] = React.useState(null);
   const images = React.useRef();
-  const params = useParams();
+  const { favoritesId, toggleFavorite } = useFavoritesId();
+  const id = Number(useParams().id);
 
   React.useEffect(() => {
-    if (shoes) setShoe(shoes.find((shoe) => shoe.id === Number(params.id)));
-  }, [shoes, params.id]);
+    if (shoes) setShoe(shoes.find((shoe) => shoe.id === id));
+  }, [shoes, id]);
 
   React.useEffect(() => {
     if (shoe) {
@@ -38,20 +40,26 @@ const Product = () => {
 
   if (shoe)
     return (
-      <Main>
-        <img src={imgSrc} alt={shoe.nome} />
-        <Infos>
-          <Name>{shoe.nome}</Name>
-          <Price>R$ {shoe.preco}</Price>
-          <DivImages ref={images}>
+      <S.Main>
+        <S.BoxImage>
+          <img src={imgSrc} alt={shoe.nome} />
+          <S.Favorite
+            active={favoritesId.includes(id)}
+            onClick={() => toggleFavorite(id)}
+          />
+        </S.BoxImage>
+        <S.Infos>
+          <S.Name>{shoe.nome}</S.Name>
+          <S.Price>R$ {shoe.preco}</S.Price>
+          <S.DivImages ref={images}>
             {shoe.cores.map(({ url }, index) => (
               <div key={index} onClick={selectColor}>
                 <img src={url} alt={`${shoe.nome}`} />
               </div>
             ))}
-          </DivImages>
+          </S.DivImages>
           <h2>Tamanhos</h2>
-          <Sizes>
+          <S.Sizes>
             {imgSrc &&
               shoe.cores
                 .find(({ url }) => url === imgSrc)
@@ -60,10 +68,10 @@ const Product = () => {
                     {n}
                   </li>
                 ))}
-          </Sizes>
-          <Button>Comprar</Button>
-        </Infos>
-      </Main>
+          </S.Sizes>
+          <S.Button>Comprar</S.Button>
+        </S.Infos>
+      </S.Main>
     );
 };
 

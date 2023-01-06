@@ -7,7 +7,7 @@ import { Main, Msg } from "./styles";
 const Favorites = () => {
   const { shoes } = React.useContext(ShoesContext);
   const [favorites, setFavorites] = React.useState([]);
-  const { favoritesId, removeFavorite } = useFavoritesId();
+  const { favoritesId, toggleFavorite } = useFavoritesId();
 
   React.useEffect(() => {
     if (shoes) setFavorites(shoes.filter(({ id }) => favoritesId.includes(id)));
@@ -24,7 +24,7 @@ const Favorites = () => {
               shoe={shoe}
               dataId={shoe.id}
               favorite={favoritesId.includes(shoe.id)}
-              removeFavorite={removeFavorite}
+              toggleFavorite={toggleFavorite}
             />
           ))
       ) : (

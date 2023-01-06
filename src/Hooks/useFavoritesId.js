@@ -7,19 +7,16 @@ const useFavoritesId = () => {
       : []
   );
 
-  const addFavorite = (id) => {
+  const toggleFavorite = (id) => {
     if (!favoritesId.includes(id)) setFavoritesId([...favoritesId, id]);
-  };
-
-  const removeFavorite = (id) => {
-    setFavoritesId(favoritesId.filter((value) => value !== id));
+    else setFavoritesId(favoritesId.filter((value) => value !== id));
   };
 
   React.useEffect(() => {
     localStorage.setItem("favoritesId", JSON.stringify(favoritesId));
   }, [favoritesId]);
 
-  return { favoritesId, addFavorite, removeFavorite };
+  return { favoritesId, toggleFavorite };
 };
 
 export default useFavoritesId;

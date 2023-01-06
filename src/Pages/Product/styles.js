@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { SizeList } from "../../Components/Filters/Sizes/styles";
+import FavoriteSVG from "../../Components/SVG/FavoriteSVG";
 
 export const Main = styled.main`
   display: grid;
@@ -9,6 +10,31 @@ export const Main = styled.main`
   min-height: 700px;
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
+  }
+`;
+
+export const BoxImage = styled.div`
+  position: relative;
+`;
+
+export const Favorite = styled(FavoriteSVG)`
+  height: 60px;
+  width: 60px;
+  position: absolute;
+  top: 17px;
+  right: 18px;
+  cursor: pointer;
+  path {
+    transition: fill 0.3s;
+    fill-opacity: ${({ active }) => (active ? "1" : "0.4")};
+    fill: ${({ active }) => (active ? "#ef233c" : "transparent")};
+    stroke: ${({ active }) => (active ? "#ef233c" : "#000000")};
+    stroke-width: 1.5;
+  }
+  @media (pointer: fine) {
+    &:hover path {
+      fill: #ef233c;
+    }
   }
 `;
 

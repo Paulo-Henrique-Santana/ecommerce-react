@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import FavoriteSVG from "../Svg/FavoriteSVG";
+import FavoriteSVG from "../SVG/FavoriteSVG";
 import styled from "styled-components";
 
 export const StyledHeader = styled.header`
