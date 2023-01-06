@@ -1,5 +1,5 @@
 import React from "react";
-import useFavorites from "../../Hooks/useFavorites";
+import useFavoritesId from "../../Hooks/useFavoritesId";
 import CardProduct from "../CardProduct/CardProduct";
 import { Msg, ProductsContainer } from "./styles";
 
@@ -11,7 +11,7 @@ const Products = ({
 }) => {
   const [filtered, setFiltered] = React.useState(null);
   const [numberShoes, setNumberShoes] = React.useState(9);
-  const { favorites, addFavorite, removeFavorite } = useFavorites();
+  const { favoritesId, addFavorite, removeFavorite } = useFavoritesId();
 
   React.useEffect(() => {
     let wait = false;
@@ -71,7 +71,7 @@ const Products = ({
               key={shoe.id}
               shoe={shoe}
               dataId={shoe.id}
-              favorite={favorites.includes(shoe.id)}
+              favorite={favoritesId.includes(shoe.id)}
               addFavorite={addFavorite}
               removeFavorite={removeFavorite}
             />

@@ -6,18 +6,21 @@ import GlobalStyle from "./globalStyle";
 import Favorites from "./Pages/Favorites/Favorites";
 import Home from "./Pages/Home/Home";
 import Product from "./Pages/Product/Product";
+import { ShoesStorage } from "./ShoesContext";
 
 const App = () => {
   return (
     <BrowserRouter>
       <GlobalStyle />
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="product/:id" element={<Product />} />
-        <Route path="favorites" element={<Favorites />} />
-      </Routes>
-      <Footer />
+      <ShoesStorage>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="product/:id" element={<Product />} />
+          <Route path="favorites" element={<Favorites />} />
+        </Routes>
+        <Footer />
+      </ShoesStorage>
     </BrowserRouter>
   );
 };

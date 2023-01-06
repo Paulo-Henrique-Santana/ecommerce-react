@@ -1,21 +1,18 @@
 import React from "react";
 import { useParams } from "react-router-dom";
+import { ShoesContext } from "../../ShoesContext";
 import { Button, DivImages, Infos, Main, Name, Price, Sizes } from "./styles";
 
 const Product = () => {
-  const params = useParams();
+  const { shoes } = React.useContext(ShoesContext);
   const [shoe, setShoe] = React.useState(null);
   const [imgSrc, setImgSrc] = React.useState(null);
   const images = React.useRef();
+  const params = useParams();
 
   React.useEffect(() => {
-    const fetchShoes = async (url) => {
-      const response = await fetch(url);
-      const json = await response.json();
-      setShoe(json.find((shoe) => shoe.id === Number(params.id)));
-    };
-    fetchShoes("/products.json");
-  }, [params]);
+    if (shoes) setShoe(shoes.find((shoe) => shoe.id === Number(params.id)));
+  }, [shoes, params.id]);
 
   React.useEffect(() => {
     if (shoe) {

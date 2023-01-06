@@ -1,26 +1,26 @@
 import React from "react";
 import FiltersMenu from "../../Components/Filters/FiltersMenu/FiltersMenu";
 import Products from "../../Components/Products/Products";
+import { ShoesContext } from "../../ShoesContext";
 import { StyledHome } from "./styles";
 
 const Home = () => {
-  const [shoes, setShoes] = React.useState(null);
+  const { shoes } = React.useContext(ShoesContext);
+  const [shuffledShoes, setShuffledShoes] = React.useState(null);
   const [selectedSizes, setSelectedSizes] = React.useState([]);
   const [selectedGenders, setSelectedGenders] = React.useState([]);
   const [selectedPrices, setSelectedPrices] = React.useState([]);
 
   React.useEffect(() => {
-    const fetchShoes = async (url) => {
-      const response = await fetch(url);
-      const json = await response.json();
-      for (let i = json.length - 1; i > 0; i--) {
+    if (shoes) {
+      let shuffled = [...shoes];
+      for (let i = shuffled.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
-        [json[i], json[j]] = [json[j], json[i]];
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
       }
-      setShoes(json);
-    };
-    fetchShoes("./products.json");
-  }, []);
+      setShuffledShoes(shuffled);
+    }
+  }, [shoes]);
 
   return (
     <StyledHome>
@@ -33,7 +33,7 @@ const Home = () => {
         />
       )}
       <Products
-        shoes={shoes}
+        shoes={shuffledShoes}
         selectedSizes={selectedSizes}
         selectedGenders={selectedGenders}
         selectedPrices={selectedPrices}

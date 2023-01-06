@@ -1,32 +1,29 @@
 import React from "react";
 import CardProduct from "../../Components/CardProduct/CardProduct";
-import useFavorites from "../../Hooks/useFavorites";
+import useFavoritesId from "../../Hooks/useFavoritesId";
+import { ShoesContext } from "../../ShoesContext";
 import { Main, Msg } from "./styles";
 
 const Favorites = () => {
-  const [products, setProducts] = React.useState([]);
-  const { favorites, removeFavorite } = useFavorites();
+  const { shoes } = React.useContext(ShoesContext);
+  const [favorites, setFavorites] = React.useState([]);
+  const { favoritesId, removeFavorite } = useFavoritesId();
 
   React.useEffect(() => {
-    const fetchShoes = async () => {
-      const response = await fetch("./products.json");
-      const json = await response.json();
-      setProducts(json.filter(({ id }) => favorites.includes(id)));
-    };
-    fetchShoes();
-  }, [favorites]);
+    if (shoes) setFavorites(shoes.filter(({ id }) => favoritesId.includes(id)));
+  }, [shoes, favoritesId]);
 
   return (
     <Main>
-      {products.length ? (
-        products
+      {favorites.length ? (
+        favorites
           .slice(0, 1000)
           .map((shoe) => (
             <CardProduct
               key={shoe.id}
               shoe={shoe}
               dataId={shoe.id}
-              favorite={favorites.includes(shoe.id)}
+              favorite={favoritesId.includes(shoe.id)}
               removeFavorite={removeFavorite}
             />
           ))
