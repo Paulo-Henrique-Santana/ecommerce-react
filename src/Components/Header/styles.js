@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+import FavoriteSVG from "../Svg/FavoriteSVG";
 import styled from "styled-components";
 
 export const StyledHeader = styled.header`
@@ -21,10 +23,11 @@ export const StyledHeader = styled.header`
 
 export const Title = styled.h1`
   white-space: nowrap;
+  color: var(--color1);
 `;
 
 export const Search = styled.input`
-  border: 1px solid #6c757d;
+  border: 1px solid var(--color1);
   border-radius: 10px;
   padding: 0 10px;
   width: 100%;
@@ -38,7 +41,23 @@ export const Search = styled.input`
 `;
 
 export const Links = styled.nav`
+  font-weight: bold;
   @media (max-width: 768px) {
     justify-self: end;
+  }
+`;
+
+export const StyledLink = styled(Link)`
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--color1);
+`;
+
+export const Favorites = styled(FavoriteSVG)`
+  width: 35px;
+  height: 35px;
+  path {
+    fill: var(--color1);
   }
 `;

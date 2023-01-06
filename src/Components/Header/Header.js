@@ -1,6 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Links, Search, StyledHeader, Title } from "./styles";
+import {
+  Favorites,
+  Links,
+  Search,
+  StyledHeader,
+  StyledLink,
+  Title,
+} from "./styles";
 
 const Header = () => {
   return (
@@ -10,7 +17,9 @@ const Header = () => {
       </Link>
       <Search placeholder="O que você está procurando?" type="text" />
       <Links>
-        <button>Favoritos</button>
+        <StyledLink to="/favorites">
+          <Favorites /> <span>Favoritos</span>
+        </StyledLink>
         <button>Carrinho</button>
       </Links>
     </StyledHeader>

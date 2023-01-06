@@ -4,7 +4,6 @@ export const StyledHome = styled.main`
   display: grid;
   grid-template-columns: auto minmax(auto, 1500px);
   gap: 30px;
-  margin: 0 15px;
   min-height: 600px;
   @media (max-width: 768px) {
     grid-template-columns: 1fr;

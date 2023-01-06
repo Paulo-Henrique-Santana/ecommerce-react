@@ -5,7 +5,6 @@ export const Main = styled.main`
   display: grid;
   grid-template-columns: minmax(450px, 700px) minmax(auto, 400px);
   gap: 50px;
-  margin: 0 15px;
   max-width: max-content;
   min-height: 700px;
   @media (max-width: 768px) {

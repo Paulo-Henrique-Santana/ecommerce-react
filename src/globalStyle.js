@@ -10,11 +10,16 @@ const GlobalStyle = createGlobalStyle`
     font-family: Arial, Helvetica, sans-serif;
   }
 
+  :root {
+    --color1: #212529;
+  }
+  
   body {
     overflow-y: scroll;
   }
-
+  
   #root {
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -35,6 +40,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   main {
+  margin: 0 15px;
     max-width: 1440px;
   }
 `;
