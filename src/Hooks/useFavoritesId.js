@@ -13,7 +13,9 @@ const useFavoritesId = () => {
   };
 
   React.useEffect(() => {
-    localStorage.setItem("favoritesId", JSON.stringify(favoritesId));
+    if (favoritesId.length)
+      localStorage.setItem("favoritesId", JSON.stringify(favoritesId));
+    else localStorage.removeItem("favoritesId");
   }, [favoritesId]);
 
   return { favoritesId, toggleFavorite };

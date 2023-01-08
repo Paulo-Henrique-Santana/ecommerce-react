@@ -13,14 +13,16 @@ const Header = () => {
   return (
     <StyledHeader>
       <Link to="/">
-        <Title>E-Shoes</Title>
+        <Title>ReactShoes</Title>
       </Link>
       <Search placeholder="O que você está procurando?" type="text" />
       <Links>
         <StyledLink to="/favorites">
           <Favorites /> <span>Favoritos</span>
         </StyledLink>
-        <button>Carrinho</button>
+        <StyledLink to="/cart">
+          <span>Carrinho</span>
+        </StyledLink>
       </Links>
     </StyledHeader>
   );

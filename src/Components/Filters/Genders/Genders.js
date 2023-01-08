@@ -3,7 +3,7 @@ import FiltersListItem from "../FiltersListItem/FiltersListItem";
 import { H2, Ul } from "../styles";
 
 const Genders = ({ shoes, setSelectedGenders }) => {
-  // const genders = [...new Set(shoes.map((shoe) => shoe.genero))];
+  // const genders = [...new Set(shoes.map((shoe) => shoe.gender))];
   const genders = ["Masculino", "Feminino", "Unissex", "Infantil"];
 
   const selectGender = ({ currentTarget }) => {

@@ -1,156 +1,156 @@
 [
   {
     "id": 1,
-    "nome": "Tênis Nike Air Max TW",
-    "genero": "Masculino",
-    "preco": 1299.99,
-    "cores": [
+    "name": "Tênis Nike Air Max TW",
+    "gender": "Masculino",
+    "price": 1299.99,
+    "colors": [
       {
-        "tamanhos": [37, 40, 42, 43, 45],
+        "sizes": [37, 40, 42, 43, 45],
         "url": "https://imgnike-a.akamaihd.net/768x768/02434651.jpg"
       },
       {
-        "tamanhos": [37, 38, 40, 42, 43, 44, 45],
+        "sizes": [37, 38, 40, 42, 43, 44, 45],
         "url": "https://imgnike-a.akamaihd.net/768x768/0243467T.jpg"
       },
       {
-        "tamanhos": [44, 45],
+        "sizes": [44, 45],
         "url": "https://imgnike-a.akamaihd.net/768x768/024346ID.jpg"
       }
     ]
   },
   {
     "id": 2,
-    "nome": "Tênis Nike Air Force 1 \"07 LV8 Next Nature",
-    "genero": "Masculino",
-    "preco": 899.99,
-    "cores": [
+    "name": "Tênis Nike Air Force 1 \"07 LV8 Next Nature",
+    "gender": "Masculino",
+    "price": 899.99,
+    "colors": [
       {
-        "tamanhos": [37, 38, 44, 45, 46],
+        "sizes": [37, 38, 44, 45, 46],
         "url": "https://imgnike-a.akamaihd.net/768x768/0223177T.jpg"
       }
     ]
   },
   {
     "id": 3,
-    "nome": "Tênis Nike Air Max Plus SE",
-    "genero": "Masculino",
-    "preco": 1499.99,
-    "cores": [
+    "name": "Tênis Nike Air Max Plus SE",
+    "gender": "Masculino",
+    "price": 1499.99,
+    "colors": [
       {
-        "tamanhos": [42, 43, 45, 46],
+        "sizes": [42, 43, 45, 46],
         "url": "https://imgnike-a.akamaihd.net/768x768/0243487T.jpg"
       }
     ]
   },
   {
     "id": 4,
-    "nome": "Tênis Nike Air Max Plus",
-    "genero": "Masculino",
-    "preco": 1199.99,
-    "cores": [
+    "name": "Tênis Nike Air Max Plus",
+    "gender": "Masculino",
+    "price": 1199.99,
+    "colors": [
       {
-        "tamanhos": [40, 43],
+        "sizes": [40, 43],
         "url": "https://imgnike-a.akamaihd.net/768x768/024347ID.jpg"
       }
     ]
   },
   {
     "id": 5,
-    "nome": "Tênis Nike Air Max 90 SE",
-    "genero": "Masculino",
-    "preco": 549.99,
-    "cores": [
+    "name": "Tênis Nike Air Max 90 SE",
+    "gender": "Masculino",
+    "price": 549.99,
+    "colors": [
       {
-        "tamanhos": [39],
+        "sizes": [39],
         "url": "https://imgnike-a.akamaihd.net/768x768/014974ID.jpg"
       }
     ]
   },
   {
     "id": 6,
-    "nome": "Tênis Nike Air Max Plus",
-    "genero": "Feminino",
-    "preco": 1139.99,
-    "cores": [
+    "name": "Tênis Nike Air Max Plus",
+    "gender": "Feminino",
+    "price": 1139.99,
+    "colors": [
       {
-        "tamanhos": [35, 36, 37],
+        "sizes": [35, 36, 37],
         "url": "https://imgnike-a.akamaihd.net/768x768/024169ID.jpg"
       }
     ]
   },
   {
     "id": 7,
-    "nome": "Tênis Nike Air Force 1 '07 SE",
-    "genero": "Feminino",
-    "preco": 899.99,
-    "cores": [
+    "name": "Tênis Nike Air Force 1 '07 SE",
+    "gender": "Feminino",
+    "price": 899.99,
+    "colors": [
       {
-        "tamanhos": [35, 36, 37, 38, 39, 40, 41],
+        "sizes": [35, 36, 37, 38, 39, 40, 41],
         "url": "https://imgnike-a.akamaihd.net/768x768/0241197T.jpg"
       }
     ]
   },
   {
     "id": 8,
-    "nome": "Tênis Nike Air Force 1 '07 LXX",
-    "genero": "Feminino",
-    "preco": 669.99,
-    "cores": [
+    "name": "Tênis Nike Air Force 1 '07 LXX",
+    "gender": "Feminino",
+    "price": 669.99,
+    "colors": [
       {
-        "tamanhos": [35, 36, 38, 39],
+        "sizes": [35, 36, 38, 39],
         "url": "https://imgnike-a.akamaihd.net/768x768/0172003X.jpg"
       }
     ]
   },
   {
     "id": 9,
-    "nome": "Tênis Nike Air Max 90 EWT",
-    "genero": "Feminino",
-    "preco": 999.99,
-    "cores": [
+    "name": "Tênis Nike Air Max 90 EWT",
+    "gender": "Feminino",
+    "price": 999.99,
+    "colors": [
       {
-        "tamanhos": [35, 36, 37],
+        "sizes": [35, 36, 37],
         "url": "https://imgnike-a.akamaihd.net/768x768/02409451.jpg"
       }
     ]
   },
   {
     "id": 10,
-    "nome": "Tênis Nike Sportswear Air Max 96 2",
-    "genero": "Feminino",
-    "preco": 659.99,
-    "cores": [
+    "name": "Tênis Nike Sportswear Air Max 96 2",
+    "gender": "Feminino",
+    "price": 659.99,
+    "colors": [
       {
-        "tamanhos": [37],
+        "sizes": [37],
         "url": "https://imgnike-a.akamaihd.net/768x768/01448751.jpg"
       }
     ]
   },
   {
     "id": 11,
-    "nome": "Tênis Nike Air Max 90 Toggle",
-    "genero": "Infantil",
-    "preco": 589.99,
-    "cores": [
+    "name": "Tênis Nike Air Max 90 Toggle",
+    "gender": "Infantil",
+    "price": 589.99,
+    "colors": [
       {
-        "tamanhos": [27, 28, 29, 30, 31, 32],
+        "sizes": [27, 28, 29, 30, 31, 32],
         "url": "https://imgnike-a.akamaihd.net/768x768/0106035L.jpg"
       },
       {
-        "tamanhos": [32],
+        "sizes": [32],
         "url": "https://imgnike-a.akamaihd.net/768x768/0106037T.jpg"
       }
     ]
   },
   {
     "id": 12,
-    "nome": "Air Jordan 4 Midnight Navy",
-    "genero": "Unissex",
-    "preco": 1699.99,
-    "cores": [
+    "name": "Air Jordan 4 Midnight Navy",
+    "gender": "Unissex",
+    "price": 1699.99,
+    "colors": [
       {
-        "tamanhos": [45],
+        "sizes": [45],
         "url": "https://imgnike-a.akamaihd.net/768x768/02449651.jpg"
       }
     ]

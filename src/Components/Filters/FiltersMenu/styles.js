@@ -33,8 +33,7 @@ export const FiltersMobile = styled.div`
 `;
 
 export const Filters = styled.div`
-  min-width: 160px;
-  max-width: 200px;
+  height: max-content;
 `;
 
 export const CloseBtn = styled.button`

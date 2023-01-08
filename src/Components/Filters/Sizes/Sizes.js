@@ -4,9 +4,9 @@ import { SizeList } from "./styles";
 
 const Sizes = ({ shoes, setSelectedSizes }) => {
   let sizes = [];
-  shoes.forEach(({ cores }) => {
-    cores.forEach(({ tamanhos }) =>
-      tamanhos.forEach((n) => !sizes.includes(n) && sizes.push(n))
+  shoes.forEach(({ colors }) => {
+    colors.forEach(({ sizes }) =>
+      sizes.forEach((n) => !sizes.includes(n) && sizes.push(n))
     );
   });
 

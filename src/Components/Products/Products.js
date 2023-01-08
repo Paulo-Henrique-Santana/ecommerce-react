@@ -39,9 +39,9 @@ const Products = ({
     setFiltered(shoes);
     if (selectedSizes.length)
       setFiltered((prev) =>
-        prev.filter(({ cores }) =>
-          cores.some(({ tamanhos }) =>
-            tamanhos.some((n) => selectedSizes.includes(n))
+        prev.filter(({ colors }) =>
+          colors.some(({ sizes }) =>
+            sizes.some((n) => selectedSizes.includes(n))
           )
         )
       );
@@ -50,14 +50,14 @@ const Products = ({
         prev.filter((shoe) =>
           selectedPrices.some((n) =>
             n === 1000
-              ? shoe.preco >= 1000
-              : shoe.preco >= n && shoe.preco < n + 100
+              ? shoe.price >= 1000
+              : shoe.price >= n && shoe.price < n + 100
           )
         )
       );
     if (selectedGenders.length)
       setFiltered((prev) =>
-        prev.filter((shoe) => selectedGenders.includes(shoe.genero))
+        prev.filter((shoe) => selectedGenders.includes(shoe.gender))
       );
   }, [shoes, selectedSizes, selectedPrices, selectedGenders]);
 

@@ -22,12 +22,14 @@ export const StyledHeader = styled.header`
 `;
 
 export const Title = styled.h1`
+  padding: 5px 10px;
+  color: var(--color2);
   white-space: nowrap;
-  color: var(--color1);
+  font-style: italic;
 `;
 
 export const Search = styled.input`
-  border: 1px solid var(--color1);
+  /* border: 1px solid var(--color3); */
   border-radius: 10px;
   padding: 0 10px;
   width: 100%;
@@ -51,13 +53,13 @@ export const StyledLink = styled(Link)`
   display: flex;
   align-items: center;
   gap: 5px;
-  color: var(--color1);
+  color: var(--color2);
 `;
 
 export const Favorites = styled(FavoriteSVG)`
   width: 35px;
   height: 35px;
   path {
-    fill: var(--color1);
+    fill: var(--color2);
   }
 `;
