@@ -1,30 +1,25 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import {
-  Favorites,
-  Links,
-  Search,
-  StyledHeader,
-  StyledLink,
-  Title,
-} from "./styles";
+import * as S from "./styles";
 
 const Header = () => {
   return (
-    <StyledHeader>
+    <S.StyledHeader>
       <Link to="/">
-        <Title>ReactShoes</Title>
+        <S.Title>ReactShoes</S.Title>
       </Link>
-      <Search placeholder="O que você está procurando?" type="text" />
-      <Links>
-        <StyledLink to="/favorites">
-          <Favorites /> <span>Favoritos</span>
-        </StyledLink>
-        <StyledLink to="/cart">
+      <S.Search placeholder="O que você está procurando?" type="text" />
+      <S.Links>
+        <S.StyledLink to="/favorites">
+          <S.Favorites />
+          <span>Favoritos</span>
+        </S.StyledLink>
+        <S.StyledLink to="/cart">
+          <S.Cart />
           <span>Carrinho</span>
-        </StyledLink>
-      </Links>
-    </StyledHeader>
+        </S.StyledLink>
+      </S.Links>
+    </S.StyledHeader>
   );
 };
 

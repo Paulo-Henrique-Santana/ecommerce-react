@@ -8,12 +8,14 @@ const GlobalStyle = createGlobalStyle`
     outline: none;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
+    color: var(--color2);
   }
 
   :root {
     --color1: #f6f6f6;
     --color2: #212529;
     --color3: #f5f5f5;
+    --border-radius-img: 5px;
   }
   
   body {
@@ -42,7 +44,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   main {
-  margin: 0 15px;
+    padding: 0 15px;
     max-width: 1440px;
   }
 `;

@@ -3,7 +3,7 @@ import CartSVG from "../SVG/CartSVG";
 import FavoriteSVG from "../SVG/FavoriteSVG";
 
 export const Product = styled.div`
-  border-radius: 5px;
+  border-radius: var(--border-radius-img);
   height: max-content;
   position: relative;
   user-select: none;

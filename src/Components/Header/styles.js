@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import FavoriteSVG from "../SVG/FavoriteSVG";
 import styled from "styled-components";
+import CartSVG from "../SVG/CartSVG";
 
 export const StyledHeader = styled.header`
   display: flex;
@@ -29,8 +30,8 @@ export const Title = styled.h1`
 `;
 
 export const Search = styled.input`
-  /* border: 1px solid var(--color3); */
   border-radius: 10px;
+  border: 1px solid transparent;
   padding: 0 10px;
   width: 100%;
   max-width: 700px;
@@ -39,6 +40,9 @@ export const Search = styled.input`
   @media (max-width: 768px) {
     grid-column: 1 / -1;
     grid-row: 2 / 3;
+  }
+  :focus {
+    border-color: black;
   }
 `;
 
@@ -61,5 +65,16 @@ export const Favorites = styled(FavoriteSVG)`
   height: 35px;
   path {
     fill: var(--color2);
+  }
+`;
+
+export const Cart = styled(CartSVG)`
+  width: 35px;
+  height: 35px;
+  circle {
+    fill: var(--color2);
+  }
+  path {
+    stroke: var(--color2);
   }
 `;

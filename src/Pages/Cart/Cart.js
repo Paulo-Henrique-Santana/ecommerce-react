@@ -7,7 +7,6 @@ const Cart = () => {
   const { shoes } = React.useContext(ShoesContext);
   const [cartProducts, setCardProducts] = React.useState([]);
   const { cart } = useCart();
-  console.log(cartProducts);
 
   React.useEffect(() => {
     if (shoes)
@@ -30,6 +29,11 @@ const Cart = () => {
     <S.Main>
       <S.ContainerProducts>
         <h1>Meu carrinho</h1>
+        <S.Titles>
+          <S.TitleProduct>Produto</S.TitleProduct>
+          <S.TitleQuantity>Quantidade</S.TitleQuantity>
+          <S.TitleTotal>Total</S.TitleTotal>
+        </S.Titles>
         {cartProducts && (
           <S.Products>
             {cartProducts.map((product, index) => (
@@ -38,11 +42,15 @@ const Cart = () => {
                   <S.Image src={product.img} alt={product.name} />
                   <S.Details>
                     <S.Name>{product.name}</S.Name>
-                    <p>{product.size}</p>
+                    <p>Tamanho: {product.size}</p>
                   </S.Details>
                 </S.ContainerDetails>
-                <p>{product.quantity}</p>
-                <p>{product.price}</p>
+                <S.Quantity>
+                  <S.Minus />
+                  {product.quantity}
+                  <S.Plus />
+                </S.Quantity>
+                <S.Total>{product.price}</S.Total>
               </S.Product>
             ))}
           </S.Products>
