@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { SizeList } from "../../Components/Filters/Sizes/styles";
+import { StyledSizes } from "../../Components/Sizes/styles";
 import FavoriteSVG from "../../Components/SVG/FavoriteSVG";
 
 export const Main = styled.main`
@@ -82,9 +82,7 @@ export const Colors = styled.ul`
   }
 `;
 
-export const Sizes = styled(SizeList)`
-  display: flex;
-  flex-wrap: wrap;
+export const Sizes = styled(StyledSizes)`
   margin-top: 10px;
   max-width: max-content;
   @media (max-width: 768px) {
@@ -104,7 +102,6 @@ export const Button = styled.button`
   color: white;
   font-size: 1.1rem;
   font-weight: bold;
-  cursor: pointer;
   &:disabled {
     opacity: 0.5;
     cursor: not-allowed;

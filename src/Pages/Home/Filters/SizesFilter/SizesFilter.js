@@ -1,8 +1,8 @@
 import React from "react";
+import Sizes from "../../../../Components/Sizes/Sizes";
 import { H2 } from "../styles";
-import { SizeList } from "./styles";
 
-const Sizes = ({ shoes, setSelectedSizes }) => {
+const SizesFilter = ({ shoes, setSelectedSizes }) => {
   let sizes = [];
 
   shoes.forEach(({ colors }) => {
@@ -26,15 +26,15 @@ const Sizes = ({ shoes, setSelectedSizes }) => {
   return (
     <div>
       <H2>Tamanho</H2>
-      <SizeList>
+      <Sizes>
         {sizes.sort().map((size, index) => (
           <li key={index} onClick={selectSize}>
             {size}
           </li>
         ))}
-      </SizeList>
+      </Sizes>
     </div>
   );
 };
 
-export default Sizes;
+export default SizesFilter;

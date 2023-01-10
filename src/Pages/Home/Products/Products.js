@@ -1,6 +1,6 @@
 import React from "react";
-import useFavoritesId from "../../Hooks/useFavoritesId";
-import CardProduct from "../CardProduct/CardProduct";
+import useFavoritesId from "../../../Hooks/useFavoritesId";
+import CardProduct from "../../../Components/CardProduct/CardProduct";
 import { Msg, ProductsContainer } from "./styles";
 
 const Products = ({

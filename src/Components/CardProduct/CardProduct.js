@@ -1,8 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { ShoesContext } from "../../ShoesContext";
 import { Data, Favorite, Name, Product, Cart } from "./styles";
 
 const CardProduct = ({ dataId, shoe, favorite, toggleFavorite }) => {
+  const { toCurrencyBRL } = React.useContext(ShoesContext);
   return (
     <Product>
       <Favorite onClick={() => toggleFavorite(dataId)} active={favorite} />
@@ -10,12 +12,7 @@ const CardProduct = ({ dataId, shoe, favorite, toggleFavorite }) => {
         <img src={shoe.colors[0].url} alt={shoe.name} />
         <Data>
           <Name>{shoe.name}</Name>
-          <p>
-            {shoe.price.toLocaleString("pt-BR", {
-              style: "currency",
-              currency: "BRL",
-            })}
-          </p>
+          <p>{toCurrencyBRL(shoe.price)}</p>
         </Data>
         <Cart />
       </Link>

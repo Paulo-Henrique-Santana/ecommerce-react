@@ -1,18 +1,20 @@
 import React from "react";
+import MinusSVG from "../../Components/SVG/MinusSVG";
+import PlusSVG from "../../Components/SVG/PlusSVG";
 import useCart from "../../Hooks/useCart";
 import { ShoesContext } from "../../ShoesContext";
 import * as S from "./styles";
 
 const Cart = () => {
-  const { shoes } = React.useContext(ShoesContext);
+  const { data, toCurrencyBRL } = React.useContext(ShoesContext);
   const [cartProducts, setCardProducts] = React.useState([]);
-  const { cart } = useCart();
+  const { cart, changeQuantity, removeProduct } = useCart();
 
   React.useEffect(() => {
-    if (shoes)
+    if (data)
       setCardProducts(
         cart.map(({ id, size, colorIndex, quantity }) => {
-          const { name, price, colors } = shoes.find((shoe) => shoe.id === id);
+          const { name, price, colors } = data.find((shoe) => shoe.id === id);
           return {
             id,
             img: colors[colorIndex].url,
@@ -23,11 +25,11 @@ const Cart = () => {
           };
         })
       );
-  }, [shoes, cart]);
+  }, [data, cart]);
 
   return (
     <S.Main>
-      <S.ContainerProducts>
+      <S.ProductsContainer>
         <h1>Meu carrinho</h1>
         <S.Titles>
           <S.TitleProduct>Produto</S.TitleProduct>
@@ -41,21 +43,41 @@ const Cart = () => {
                 <S.ContainerDetails>
                   <S.Image src={product.img} alt={product.name} />
                   <S.Details>
-                    <S.Name>{product.name}</S.Name>
-                    <p>Tamanho: {product.size}</p>
+                    <div>
+                      <S.Name>{product.name}</S.Name>
+                      <p>Tamanho: {product.size}</p>
+                    </div>
+                    <p onClick={() => removeProduct(index)}>Remover</p>
                   </S.Details>
                 </S.ContainerDetails>
-                <S.Quantity>
-                  <S.Minus />
-                  {product.quantity}
-                  <S.Plus />
-                </S.Quantity>
-                <S.Total>{product.price}</S.Total>
+                <S.QuantityContainer>
+                  <S.QuantityButton
+                    onClick={() => changeQuantity(index, product.quantity - 1)}
+                  >
+                    <MinusSVG />
+                  </S.QuantityButton>
+                  <S.Quantity
+                    type="text"
+                    maxLength="2"
+                    value={product.quantity}
+                    onChange={({ target }) =>
+                      changeQuantity(index, Number(target.value))
+                    }
+                  />
+                  <S.QuantityButton
+                    onClick={() => changeQuantity(index, product.quantity + 1)}
+                  >
+                    <PlusSVG />
+                  </S.QuantityButton>
+                </S.QuantityContainer>
+                <S.Total>
+                  {toCurrencyBRL(product.price * product.quantity)}
+                </S.Total>
               </S.Product>
             ))}
           </S.Products>
         )}
-      </S.ContainerProducts>
+      </S.ProductsContainer>
       <S.Summary>
         <h1>Resumo</h1>
       </S.Summary>

@@ -1,9 +1,8 @@
 import styled from "styled-components";
 
-export const SizeList = styled.ul`
+export const StyledSizes = styled.ul`
   display: flex;
   flex-wrap: wrap;
-  grid-template-columns: repeat(4, 1fr);
   gap: 10px;
   margin-bottom: 30px;
   li {

@@ -6,7 +6,7 @@ import { ShoesContext } from "../../ShoesContext";
 import * as S from "./styles";
 
 const Product = () => {
-  const { shoes } = React.useContext(ShoesContext);
+  const shoes = React.useContext(ShoesContext);
   const [shoe, setShoe] = React.useState(null);
   const [colorIndex, setColorIndex] = React.useState(0);
   const [selectedSize, setSize] = React.useState(null);
@@ -18,8 +18,8 @@ const Product = () => {
   const navigate = useNavigate();
 
   React.useEffect(() => {
-    if (shoes) setShoe(shoes.find((shoe) => shoe.id === id));
-  }, [shoes, id]);
+    if (shoes.data) setShoe(shoes.data.find((shoe) => shoe.id === id));
+  }, [shoes.data, id]);
 
   const removeSelectedSizes = () =>
     sizes.current.childNodes.forEach((li) => li.classList.remove("selected"));
@@ -62,12 +62,7 @@ const Product = () => {
         </S.BoxImage>
         <S.Infos>
           <S.Name>{shoe.name}</S.Name>
-          <S.Price>
-            {shoe.price.toLocaleString("pt-BR", {
-              style: "currency",
-              currency: "BRL",
-            })}
-          </S.Price>
+          <S.Price>{shoes.toCurrencyBRL(shoe.price)}</S.Price>
           <S.Colors ref={colors}>
             {shoe.colors.map(({ url }, index) => (
               <li

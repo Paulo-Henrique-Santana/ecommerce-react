@@ -1,6 +1,4 @@
 import styled from "styled-components";
-import MinusSVG from "../../Components/SVG/MinusSVG";
-import PlusSVG from "../../Components/SVG/PlusSVG";
 
 export const Main = styled.main`
   display: flex;
@@ -10,13 +8,15 @@ export const Main = styled.main`
   }
 `;
 
-export const ContainerProducts = styled.div`
+export const ProductsContainer = styled.div`
   flex: 1;
 `;
 
 export const Titles = styled.div`
   display: flex;
   padding: 25px 0;
+  font-size: 1.1rem;
+  font-weight: bold;
 `;
 
 export const TitleProduct = styled.p`
@@ -26,13 +26,13 @@ export const TitleProduct = styled.p`
 
 export const TitleQuantity = styled.p`
   flex: 1;
-  min-width: 100px;
+  min-width: 125px;
   text-align: center;
 `;
 
 export const TitleTotal = styled.p`
   flex: 1;
-  min-width: 100px;
+  min-width: 125px;
   text-align: center;
 `;
 
@@ -51,34 +51,46 @@ export const ContainerDetails = styled.div`
 `;
 
 export const Details = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   padding-top: 5px;
   padding-left: 20px;
 `;
 
 export const Name = styled.p`
-  height: 60px;
+  height: 70px;
   font-size: 1.1rem;
   font-weight: bold;
 `;
 
-export const Quantity = styled.p`
+export const QuantityContainer = styled.div`
   flex: 1;
-  min-width: 100px;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  min-width: 125px;
   font-size: 1.3rem;
 `;
 
-export const Minus = styled(MinusSVG)`
+export const QuantityButton = styled.button`
+  border: none;
+  border-radius: 1px;
   width: 20px;
+  height: 20px;
+  background-color: transparent;
 `;
 
-export const Plus = styled(PlusSVG)`
-  width: 20px;
+export const Quantity = styled.input`
+  border: 1px solid black;
+  height: 20px;
+  width: 35px;
+  font-size: 1rem;
+  text-align: center;
 `;
 
 export const Total = styled.p`
   flex: 1;
-  min-width: 100px;
+  min-width: 125px;
   text-align: center;
 `;
 

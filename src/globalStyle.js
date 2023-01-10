@@ -30,6 +30,12 @@ const GlobalStyle = createGlobalStyle`
     position: relative;
   }
 
+  main {
+    padding: 0 15px;
+    max-width: 1440px;
+    min-height: 600px;
+  }
+
   ul {
     list-style-type: none;
   }
@@ -43,10 +49,10 @@ const GlobalStyle = createGlobalStyle`
     max-width: 100%;
   }
 
-  main {
-    padding: 0 15px;
-    max-width: 1440px;
+  button {
+    cursor: pointer;
   }
+
 `;
 
 export default GlobalStyle;

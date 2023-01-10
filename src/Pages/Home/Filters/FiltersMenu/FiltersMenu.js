@@ -1,7 +1,7 @@
 import React from "react";
 import Genders from "../Genders/Genders";
 import Prices from "../Prices/Prices";
-import Sizes from "../Sizes/Sizes";
+import SizesFilter from "../SizesFilter/SizesFilter";
 import { FiltersStyle } from "../styles";
 import {
   CloseBtn,
@@ -10,7 +10,7 @@ import {
   FiltersMobile,
   Filters,
 } from "./styles";
-import FiltersSVG from "../../SVG/FiltersSVG";
+import FiltersSVG from "../../../../Components/SVG/FiltersSVG";
 
 const FiltersMenu = ({
   shoes,
@@ -72,7 +72,7 @@ const FiltersMenu = ({
           <FiltersMobile>
             <FiltersStyle />
             <CloseBtn onClick={() => setFiltersMobile(false)}>x</CloseBtn>
-            <Sizes shoes={shoes} setSelectedSizes={setSelectedSizes} />
+            <SizesFilter shoes={shoes} setSelectedSizes={setSelectedSizes} />
             <Prices setSelectedPrices={setSelectedPrices} />
             <Genders shoes={shoes} setSelectedGenders={setSelectedGenders} />
           </FiltersMobile>
@@ -83,7 +83,7 @@ const FiltersMenu = ({
     return (
       <Filters>
         <FiltersStyle />
-        <Sizes shoes={shoes} setSelectedSizes={setSelectedSizes} />
+        <SizesFilter shoes={shoes} setSelectedSizes={setSelectedSizes} />
         <Prices setSelectedPrices={setSelectedPrices} />
         <Genders shoes={shoes} setSelectedGenders={setSelectedGenders} />
       </Filters>

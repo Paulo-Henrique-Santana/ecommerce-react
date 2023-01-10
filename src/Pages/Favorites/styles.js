@@ -1,10 +1,14 @@
 import styled from "styled-components";
 
-export const Main = styled.main`
+export const H1 = styled.h1`
+  margin-bottom: 50px;
+  text-align: center;
+`;
+
+export const Favorites = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px 25px;
-  min-height: 600px;
   @media (max-width: 768px) {
     grid-template-columns: 1fr 1fr;
   }

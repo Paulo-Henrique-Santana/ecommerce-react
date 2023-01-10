@@ -2,23 +2,23 @@ import React from "react";
 import CardProduct from "../../Components/CardProduct/CardProduct";
 import useFavoritesId from "../../Hooks/useFavoritesId";
 import { ShoesContext } from "../../ShoesContext";
-import { Main, Msg } from "./styles";
+import * as S from "./styles";
 
 const Favorites = () => {
-  const { shoes } = React.useContext(ShoesContext);
+  const { data } = React.useContext(ShoesContext);
   const [favorites, setFavorites] = React.useState([]);
   const { favoritesId, toggleFavorite } = useFavoritesId();
 
   React.useEffect(() => {
-    if (shoes) setFavorites(shoes.filter(({ id }) => favoritesId.includes(id)));
-  }, [shoes, favoritesId]);
+    if (data) setFavorites(data.filter(({ id }) => favoritesId.includes(id)));
+  }, [data, favoritesId]);
 
   return (
-    <Main>
+    <main>
+      <S.H1>Meus Favoritos</S.H1>
       {favorites.length ? (
-        favorites
-          .slice(0, 1000)
-          .map((shoe) => (
+        <S.Favorites>
+          {favorites.slice(0, 1000).map((shoe) => (
             <CardProduct
               key={shoe.id}
               shoe={shoe}
@@ -26,11 +26,12 @@ const Favorites = () => {
               favorite={favoritesId.includes(shoe.id)}
               toggleFavorite={toggleFavorite}
             />
-          ))
+          ))}
+        </S.Favorites>
       ) : (
-        <Msg>Nenhum calçado foi adicionado aos favoritos!</Msg>
+        <S.Msg>Nenhum produto foi adicionado aos favoritos!</S.Msg>
       )}
-    </Main>
+    </main>
   );
 };
 
