@@ -1,6 +1,4 @@
 import React from "react";
-import MinusSVG from "../../Components/SVG/MinusSVG";
-import PlusSVG from "../../Components/SVG/PlusSVG";
 import useCart from "../../Hooks/useCart";
 import { ShoesContext } from "../../ShoesContext";
 import * as S from "./styles";
@@ -30,7 +28,7 @@ const Cart = () => {
   return (
     <S.Main>
       <S.ProductsContainer>
-        <h1>Meu carrinho</h1>
+        <S.H1>Meu carrinho</S.H1>
         <S.Titles>
           <S.TitleProduct>Produto</S.TitleProduct>
           <S.TitleQuantity>Quantidade</S.TitleQuantity>
@@ -47,28 +45,17 @@ const Cart = () => {
                       <S.Name>{product.name}</S.Name>
                       <p>Tamanho: {product.size}</p>
                     </div>
-                    <p onClick={() => removeProduct(index)}>Remover</p>
+                    <S.Remove onClick={() => removeProduct(index)}>
+                      Remover
+                    </S.Remove>
                   </S.Details>
                 </S.ContainerDetails>
                 <S.QuantityContainer>
-                  <S.QuantityButton
-                    onClick={() => changeQuantity(index, product.quantity - 1)}
-                  >
-                    <MinusSVG />
-                  </S.QuantityButton>
-                  <S.Quantity
-                    type="text"
-                    maxLength="2"
-                    value={product.quantity}
-                    onChange={({ target }) =>
-                      changeQuantity(index, Number(target.value))
-                    }
+                  <S.StyledQuantity
+                    quantity={product.quantity}
+                    productIndex={index}
+                    changeQuantity={changeQuantity}
                   />
-                  <S.QuantityButton
-                    onClick={() => changeQuantity(index, product.quantity + 1)}
-                  >
-                    <PlusSVG />
-                  </S.QuantityButton>
                 </S.QuantityContainer>
                 <S.Total>
                   {toCurrencyBRL(product.price * product.quantity)}
@@ -80,6 +67,7 @@ const Cart = () => {
       </S.ProductsContainer>
       <S.Summary>
         <h1>Resumo</h1>
+        <p>Valor Total: {}</p>
       </S.Summary>
     </S.Main>
   );

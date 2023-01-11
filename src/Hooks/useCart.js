@@ -14,13 +14,14 @@ const useCart = () => {
     else setCart([...cart, { id, size, colorIndex, quantity: 1 }]);
   };
 
-  const changeQuantity = (index, quantity) => {
-    if (quantity > 0) {
+  const changeQuantity = React.useCallback(
+    (index, quantity) => {
       const newCart = [...cart];
       newCart[index] = { ...newCart[index], quantity };
       setCart(newCart);
-    }
-  };
+    },
+    [cart]
+  );
 
   const removeProduct = (index) =>
     setCart(cart.filter((product) => product !== cart[index]));

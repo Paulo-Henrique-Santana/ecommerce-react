@@ -12,7 +12,6 @@ const MinusSVG = ({ className }) => {
     >
       <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
       <g id="SVGRepo_iconCarrier">
-        <style type="text/css"></style>
         <g id="surface1">
           <path d="M5,11v2h14v-2H5z"></path>
         </g>

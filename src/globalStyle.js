@@ -8,13 +8,12 @@ const GlobalStyle = createGlobalStyle`
     outline: none;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
-    color: var(--color2);
   }
-
+  
   :root {
     --color1: #f6f6f6;
     --color2: #212529;
-    --color3: #f5f5f5;
+    --color3: #a5a5a5;
     --border-radius-img: 5px;
   }
   
@@ -29,11 +28,12 @@ const GlobalStyle = createGlobalStyle`
     align-items: center;
     position: relative;
   }
-
+  
   main {
     padding: 0 15px;
     max-width: 1440px;
     min-height: 600px;
+    color: var(--color2);
   }
 
   ul {
