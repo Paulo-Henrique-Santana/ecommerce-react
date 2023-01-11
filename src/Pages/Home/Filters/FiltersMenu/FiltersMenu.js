@@ -10,7 +10,7 @@ import {
   FiltersMobile,
   Filters,
 } from "./styles";
-import FiltersSVG from "../../../../Components/SVG/FiltersSVG";
+import FiltersSVG from "../../../../Components/Svg/FiltersSVG";
 
 const FiltersMenu = ({
   shoes,

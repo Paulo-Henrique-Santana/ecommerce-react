@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { StyledSizes } from "../../Components/Sizes/styles";
-import FavoriteSVG from "../../Components/SVG/FavoriteSVG";
+import FavoriteSVG from "../../Components/Svg/FavoriteSVG";
 
 export const Main = styled.main`
   display: grid;

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import FavoriteSVG from "../SVG/FavoriteSVG";
+import FavoriteSVG from "../Svg/FavoriteSVG";
 import styled from "styled-components";
-import CartSVG from "../SVG/CartSVG";
+import CartSVG from "../Svg/CartSVG";
 
 export const StyledHeader = styled.header`
   display: flex;

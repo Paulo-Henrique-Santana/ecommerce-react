@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import CartSVG from "../SVG/CartSVG";
-import FavoriteSVG from "../SVG/FavoriteSVG";
+import CartSVG from "../Svg/CartSVG";
+import FavoriteSVG from "../Svg/FavoriteSVG";
 
 export const Product = styled.div`
   border-radius: var(--border-radius-img);

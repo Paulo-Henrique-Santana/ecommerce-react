@@ -1,6 +1,6 @@
 import React from "react";
-import MinusSVG from "../../../Components/SVG/MinusSVG";
-import PlusSVG from "../../../Components/SVG/PlusSVG";
+import MinusSVG from "../../../Components/Svg/MinusSVG";
+import PlusSVG from "../../../Components/Svg/PlusSVG";
 
 const Quantity = ({ className, quantity, productIndex, changeQuantity }) => {
   const [value, setValue] = React.useState(quantity);
