@@ -7,7 +7,7 @@ const GlobalStyle = createGlobalStyle`
     border: none;
     outline: none;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', sans-serif;
   }
   
   :root {
@@ -26,6 +26,7 @@ const GlobalStyle = createGlobalStyle`
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     position: relative;
   }
   

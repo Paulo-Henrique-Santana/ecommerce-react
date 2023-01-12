@@ -94,13 +94,13 @@ export const Button = styled.button`
   margin: 0 auto;
   border: none;
   border-radius: var(--border-radius-img);
+  padding: 13px 0;
   min-width: 250px;
   width: 100%;
   max-width: 350px;
-  height: 50px;
   background-color: var(--color2);
   color: white;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: bold;
   &:disabled {
     opacity: 0.5;

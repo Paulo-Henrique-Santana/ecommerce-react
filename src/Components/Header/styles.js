@@ -9,7 +9,7 @@ export const StyledHeader = styled.header`
   align-items: center;
   gap: 40px;
   margin-bottom: 50px;
-  padding: 25px 50px;
+  padding: 20px 50px;
   background-color: #f7f7f7;
   width: 100%;
   @media (max-width: 768px) {
