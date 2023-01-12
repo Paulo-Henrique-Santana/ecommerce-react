@@ -6,6 +6,10 @@ const Quantity = ({ className, quantity, productIndex, changeQuantity }) => {
   const [value, setValue] = React.useState(quantity);
   const regexp = /^[1-9]\d*$/;
 
+  React.useEffect(() => {
+    setValue(quantity);
+  }, [quantity]);
+
   const changeValue = (newValue) => {
     if (!isNaN(newValue)) setValue(newValue);
     if (regexp.test(newValue)) changeQuantity(productIndex, Number(newValue));

@@ -3,6 +3,7 @@ import * as S from "./styles";
 
 const CartSummary = ({ cartProducts, toCurrencyBRL }) => {
   const [coupon, setCoupon] = React.useState("");
+  const [validCoupon, setValidCoupon] = React.useState(null);
   const [discount, setDiscount] = React.useState(0);
   const totalPrice = cartProducts.reduce(
     (prev, current) => prev + current.price * current.quantity,
@@ -12,8 +13,13 @@ const CartSummary = ({ cartProducts, toCurrencyBRL }) => {
 
   const validateCoupon = (event) => {
     event.preventDefault();
-    if (coupon.toUpperCase() === "REACTSHOES") setDiscount(100);
-    else setDiscount(0);
+    if (coupon.toUpperCase() === "REACTSHOES") {
+      setDiscount(100);
+      setValidCoupon(true);
+    } else {
+      setDiscount(0);
+      setValidCoupon(false);
+    }
   };
 
   return (
@@ -33,11 +39,12 @@ const CartSummary = ({ cartProducts, toCurrencyBRL }) => {
           />
           <S.CouponButton>Aplicar</S.CouponButton>
         </S.CouponForm>
-        {!!discount ? (
-          <S.CouponMsg>Cupom aplicado com sucesso!</S.CouponMsg>
-        ) : (
-          <S.CouponError>Cupom inválido!</S.CouponError>
-        )}
+        {validCoupon !== null &&
+          (validCoupon ? (
+            <S.CouponMsg>Cupom aplicado com sucesso!</S.CouponMsg>
+          ) : (
+            <S.CouponError>Cupom inválido!</S.CouponError>
+          ))}
       </S.CouponContainer>
       <S.SummaryValues>
         Desconto <span>- {toCurrencyBRL(discount)}</span>

@@ -32,12 +32,14 @@ const Home = () => {
           setSelectedPrices={setSelectedPrices}
         />
       )}
-      <Products
-        shoes={shuffledShoes}
-        selectedSizes={selectedSizes}
-        selectedGenders={selectedGenders}
-        selectedPrices={selectedPrices}
-      />
+      {shuffledShoes && (
+        <Products
+          shoes={shuffledShoes}
+          selectedSizes={selectedSizes}
+          selectedGenders={selectedGenders}
+          selectedPrices={selectedPrices}
+        />
+      )}
     </StyledHome>
   );
 };

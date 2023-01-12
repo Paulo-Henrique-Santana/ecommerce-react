@@ -1,7 +1,8 @@
 import React from "react";
 import useFavoritesId from "../../../Hooks/useFavoritesId";
 import CardProduct from "../../../Components/CardProduct/CardProduct";
-import { Msg, ProductsContainer } from "./styles";
+import { ProductsContainer } from "./styles";
+import EmptyPageWarning from "../../../Components/EmptyPageWarning/EmptyPageWarning";
 
 const Products = ({
   shoes,
@@ -61,24 +62,25 @@ const Products = ({
       );
   }, [shoes, selectedSizes, selectedPrices, selectedGenders]);
 
+  if (filtered && filtered.length)
+    return (
+      <ProductsContainer>
+        {filtered.slice(0, numberShoes).map((shoe) => (
+          <CardProduct
+            key={shoe.id}
+            shoe={shoe}
+            dataId={shoe.id}
+            favorite={favoritesId.includes(shoe.id)}
+            toggleFavorite={toggleFavorite}
+          />
+        ))}
+      </ProductsContainer>
+    );
+
   return (
-    <ProductsContainer>
-      {filtered &&
-        filtered
-          .slice(0, numberShoes)
-          .map((shoe) => (
-            <CardProduct
-              key={shoe.id}
-              shoe={shoe}
-              dataId={shoe.id}
-              favorite={favoritesId.includes(shoe.id)}
-              toggleFavorite={toggleFavorite}
-            />
-          ))}
-      {shoes && (!filtered || !filtered.length) && (
-        <Msg>Nenhum produto foi encontrado</Msg>
-      )}
-    </ProductsContainer>
+    <EmptyPageWarning>
+      <h1>Nenhum produto foi encontrado :(</h1>
+    </EmptyPageWarning>
   );
 };
 

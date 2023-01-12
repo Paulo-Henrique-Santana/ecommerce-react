@@ -1,5 +1,7 @@
 import React from "react";
 import CardProduct from "../../Components/CardProduct/CardProduct";
+import EmptyPageWarning from "../../Components/EmptyPageWarning/EmptyPageWarning";
+import FavoriteSVG from "../../Components/Svg/FavoriteSVG";
 import useFavoritesId from "../../Hooks/useFavoritesId";
 import { ShoesContext } from "../../ShoesContext";
 import * as S from "./styles";
@@ -13,10 +15,10 @@ const Favorites = () => {
     if (data) setFavorites(data.filter(({ id }) => favoritesId.includes(id)));
   }, [data, favoritesId]);
 
-  return (
-    <main>
-      <S.H1>Meus Favoritos</S.H1>
-      {favorites.length ? (
+  if (favorites.length)
+    return (
+      <main>
+        <S.H1>Meus Favoritos</S.H1>
         <S.Favorites>
           {favorites.slice(0, 1000).map((shoe) => (
             <CardProduct
@@ -28,10 +30,13 @@ const Favorites = () => {
             />
           ))}
         </S.Favorites>
-      ) : (
-        <S.Msg>Nenhum produto foi adicionado aos favoritos!</S.Msg>
-      )}
-    </main>
+      </main>
+    );
+  return (
+    <EmptyPageWarning>
+      <FavoriteSVG />
+      <h1>Sua lista de favoritos está vazia :(</h1>
+    </EmptyPageWarning>
   );
 };
 
