@@ -7,15 +7,19 @@ export const StyledHeader = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 40px;
+  gap: 20px;
   margin-bottom: 50px;
-  padding: 20px 50px;
+  padding: 25px 40px;
   background-color: #f7f7f7;
   width: 100%;
+  @media (max-width: 1440px) {
+    padding: 20px 15px;
+  }
   @media (max-width: 768px) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+    gap: 15px;
     padding-left: 15px;
     padding-right: 15px;
     margin-bottom: 25px;
@@ -23,10 +27,12 @@ export const StyledHeader = styled.header`
 `;
 
 export const Title = styled.h1`
-  padding: 5px 10px;
   color: var(--color2);
   white-space: nowrap;
   font-style: italic;
+  @media (max-width: 320px) {
+    font-size: 1.7rem;
+  }
 `;
 
 export const Search = styled.input`
@@ -47,8 +53,11 @@ export const Search = styled.input`
 `;
 
 export const Links = styled.nav`
+  display: flex;
+  gap: 20px;
   font-weight: bold;
   @media (max-width: 768px) {
+    gap: 10px;
     justify-self: end;
   }
 `;
@@ -58,6 +67,11 @@ export const StyledLink = styled(Link)`
   align-items: center;
   gap: 5px;
   color: var(--color2);
+  @media (max-width: 768px) {
+    span {
+      display: none;
+    }
+  }
 `;
 
 export const Favorites = styled(FavoriteSVG)`
