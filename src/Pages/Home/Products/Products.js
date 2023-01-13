@@ -3,6 +3,8 @@ import useFavoritesId from "../../../Hooks/useFavoritesId";
 import CardProduct from "../../../Components/CardProduct/CardProduct";
 import { ProductsContainer } from "./styles";
 import EmptyPageWarning from "../../../Components/EmptyPageWarning/EmptyPageWarning";
+import { useSearchParams } from "react-router-dom";
+import SearchSVG from "../../../Components/Svg/SearchSVG";
 
 const Products = ({
   shoes,
@@ -13,6 +15,7 @@ const Products = ({
   const [filtered, setFiltered] = React.useState(null);
   const [numberShoes, setNumberShoes] = React.useState(9);
   const { favoritesId, toggleFavorite } = useFavoritesId();
+  const search = useSearchParams()[0].get("search");
 
   React.useEffect(() => {
     let wait = false;
@@ -38,6 +41,10 @@ const Products = ({
 
   React.useEffect(() => {
     setFiltered(shoes);
+    if (search)
+      setFiltered((prev) =>
+        prev.filter(({ name }) => name.toUpperCase().includes(search))
+      );
     if (selectedSizes.length)
       setFiltered((prev) =>
         prev.filter(({ colors }) =>
@@ -60,7 +67,7 @@ const Products = ({
       setFiltered((prev) =>
         prev.filter((shoe) => selectedGenders.includes(shoe.gender))
       );
-  }, [shoes, selectedSizes, selectedPrices, selectedGenders]);
+  }, [shoes, search, selectedSizes, selectedPrices, selectedGenders]);
 
   if (filtered && filtered.length)
     return (
@@ -79,6 +86,7 @@ const Products = ({
 
   return (
     <EmptyPageWarning>
+      <SearchSVG />
       <h1>Nenhum produto foi encontrado :(</h1>
     </EmptyPageWarning>
   );

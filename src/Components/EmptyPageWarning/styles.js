@@ -13,8 +13,8 @@ export const Main = styled.main`
   }
   svg {
     margin: 0 auto;
-    width: 150px;
-    height: 150px;
+    width: 125px;
+    height: 125px;
   }
   svg path {
     stroke: var(--color2);

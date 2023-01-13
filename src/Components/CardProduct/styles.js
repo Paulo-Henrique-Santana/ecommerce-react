@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import CartSVG from "../Svg/CartSVG";
 import FavoriteSVG from "../Svg/FavoriteSVG";
 
 export const Product = styled.div`
@@ -8,6 +7,7 @@ export const Product = styled.div`
   position: relative;
   user-select: none;
   box-shadow: 0px 0px 6px 0px rgb(0 0 0 / 15%);
+  text-align: center;
   &:hover svg {
     display: block;
   }
@@ -46,16 +46,4 @@ export const Name = styled.p`
   height: 60px;
   font-size: 1.05rem;
   font-weight: bold;
-`;
-
-export const Cart = styled(CartSVG)`
-  /* display: none; */
-  width: 45px;
-  height: 45px;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  border-radius: 5px 0 5px 0;
-  padding: 2px;
-  background-color: var(--color2);
 `;

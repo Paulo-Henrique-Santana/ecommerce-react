@@ -7,7 +7,7 @@ const GlobalStyle = createGlobalStyle`
     border: none;
     outline: none;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', 'Arial', sans-serif;
   }
   
   :root {

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { ShoesContext } from "../../ShoesContext";
-import { Data, Favorite, Name, Product, Cart } from "./styles";
+import { Data, Favorite, Name, Product } from "./styles";
 
 const CardProduct = ({ dataId, shoe, favorite, toggleFavorite }) => {
   const { toCurrencyBRL } = React.useContext(ShoesContext);
@@ -14,7 +14,6 @@ const CardProduct = ({ dataId, shoe, favorite, toggleFavorite }) => {
           <Name>{shoe.name}</Name>
           <p>{toCurrencyBRL(shoe.price)}</p>
         </Data>
-        <Cart />
       </Link>
     </Product>
   );

@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import FavoriteSVG from "../Svg/FavoriteSVG";
 import styled from "styled-components";
 import CartSVG from "../Svg/CartSVG";
+import SearchSVG from "../Svg/SearchSVG";
 
 export const StyledHeader = styled.header`
   display: flex;
@@ -35,21 +36,42 @@ export const Title = styled.h1`
   }
 `;
 
-export const Search = styled.input`
-  border-radius: 10px;
-  border: 1px solid transparent;
-  padding: 0 10px;
+export const SearchForm = styled.form`
+  display: flex;
   width: 100%;
   max-width: 700px;
-  height: 35px;
-  font-size: 0.9rem;
   @media (max-width: 768px) {
     grid-column: 1 / -1;
     grid-row: 2 / 3;
   }
+`;
+
+export const SearchInput = styled.input`
+  flex: 1;
+  border-radius: 10px 0 0 10px;
+  border: 1px solid transparent;
+  border-right: none;
+  padding: 0 10px;
+  height: 35px;
+  font-size: 0.9rem;
   :focus {
     border-color: black;
   }
+  &:focus + button {
+    border-color: black;
+  }
+`;
+
+export const SearchButton = styled.button`
+  border: 1px solid transparent;
+  border-left: none;
+  border-radius: 0 10px 10px 0;
+  padding-right: 7px;
+  background-color: white;
+`;
+
+export const StyledSearchSVG = styled(SearchSVG)`
+  width: 20px;
 `;
 
 export const Links = styled.nav`
