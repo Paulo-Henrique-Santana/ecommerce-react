@@ -4,6 +4,7 @@ import Quantity from "../Quantity/Quantity";
 export const ProductsContainer = styled.div`
   flex: 1;
   padding-top: 20px;
+  animation: showLeft 0.5s;
   @media (max-width: 1024px) {
     width: 100%;
   }
@@ -41,7 +42,7 @@ export const Products = styled.div``;
 export const Product = styled.div`
   display: grid;
   grid-template-columns: minmax(auto, 550px) 1fr 1fr;
-  border-top: 1px solid var(--color3);
+  border-top: 1px solid #e5e5e5;
   padding: 25px 0;
 `;
 
@@ -101,7 +102,7 @@ export const Remove = styled.p`
   font-size: 0.95rem;
   font-weight: bold;
   cursor: pointer;
-  color: var(--color3);
+  color: #ee6055;
 `;
 
 export const QuantityContainer = styled.div`
@@ -125,14 +126,14 @@ export const StyledQuantity = styled(Quantity)`
   input {
     margin: 0 5px;
     outline: 1px solid transparent;
-    border: 1px solid var(--color2);
+    border: 1px solid var(--color1);
     border-radius: 3px;
     height: 25px;
     width: 35px;
     font-size: 0.95rem;
     text-align: center;
     &:focus {
-      outline-color: var(--color2);
+      outline-color: var(--color1);
     }
   }
   button {

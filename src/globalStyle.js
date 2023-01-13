@@ -8,17 +8,18 @@ const GlobalStyle = createGlobalStyle`
     outline: none;
     box-sizing: border-box;
     font-family: 'Roboto', 'Arial', sans-serif;
+    -webkit-tap-highlight-color: transparent;
   }
   
   :root {
-    --color1: #f6f6f6;
-    --color2: #212529;
-    --color3: #a5a5a5;
+    --color1: #212529;
+    --color2: #f6f6f6;
     --border-radius-img: 5px;
+    --box-shadow1: 0px 0px 6px 0px rgb(0 0 0 / 15%);
   }
   
   body {
-    overflow-y: scroll;
+    overflow-x: hidden;
   }
   
   #root {
@@ -34,7 +35,7 @@ const GlobalStyle = createGlobalStyle`
     padding: 0 15px;
     max-width: 1440px;
     min-height: 600px;
-    color: var(--color2);
+    color: var(--color1);
   }
 
   ul {
@@ -52,6 +53,37 @@ const GlobalStyle = createGlobalStyle`
 
   button {
     cursor: pointer;
+  }
+
+  @keyframes show {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes showLeft {
+    from {
+      opacity: 0;
+      transform: translate(-25px, 0);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  @keyframes showRight {
+    from {
+      opacity: 0;
+      transform: translate(25px, 0);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
   }
 
 `;

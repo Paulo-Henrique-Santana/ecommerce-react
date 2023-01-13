@@ -6,8 +6,9 @@ export const Product = styled.div`
   height: max-content;
   position: relative;
   user-select: none;
-  box-shadow: 0px 0px 6px 0px rgb(0 0 0 / 15%);
+  box-shadow: var(--box-shadow1);
   text-align: center;
+  animation: show 0.5s;
   &:hover svg {
     display: block;
   }

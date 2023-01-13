@@ -34,6 +34,7 @@ export const FiltersMobile = styled.div`
 
 export const Filters = styled.div`
   height: max-content;
+  animation: showLeft 0.5s;
 `;
 
 export const CloseBtn = styled.button`

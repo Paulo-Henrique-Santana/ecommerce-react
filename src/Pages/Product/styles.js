@@ -4,11 +4,11 @@ import FavoriteSVG from "../../Components/Svg/FavoriteSVG";
 
 export const Main = styled.main`
   display: grid;
-  grid-template-columns: minmax(450px, 700px) minmax(auto, 400px);
+  grid-template-columns: minmax(450px, 650px) minmax(auto, 400px);
   gap: 50px;
   max-width: max-content;
   min-height: 700px;
-  color: var(--color2);
+  color: var(--color1);
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
   }
@@ -16,6 +16,7 @@ export const Main = styled.main`
 
 export const BoxImage = styled.div`
   position: relative;
+  animation: showLeft 0.5s;
 `;
 
 export const Favorite = styled(FavoriteSVG)`
@@ -46,6 +47,7 @@ export const Favorite = styled(FavoriteSVG)`
 `;
 
 export const Infos = styled.div`
+  animation: showRight 0.5s;
   @media (max-width: 768px) {
     display: flex;
     flex-direction: column;
@@ -98,7 +100,7 @@ export const Button = styled.button`
   min-width: 250px;
   width: 100%;
   max-width: 350px;
-  background-color: var(--color2);
+  background-color: var(--color1);
   color: white;
   font-size: 1.2rem;
   font-weight: bold;

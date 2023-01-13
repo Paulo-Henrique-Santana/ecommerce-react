@@ -1,8 +1,15 @@
 import React from "react";
-import { StyledFooter } from "./styles";
+import * as S from "./styles";
 
 const Footer = () => {
-  return <StyledFooter>Footer</StyledFooter>;
+  return (
+    <S.StyledFooter>
+      <S.P>
+        Desenvolvido por
+        <a href="https://github.com/Paulo-Henrique-Santana"> Paulo Henrique</a>
+      </S.P>
+    </S.StyledFooter>
+  );
 };
 
 export default Footer;

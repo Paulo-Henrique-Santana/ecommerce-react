@@ -11,6 +11,7 @@ export const ProductsContainer = styled.div`
   @media (max-width: 450px) {
     grid-template-columns: 1fr;
   }
+  animation: showRight 0.5s;
 `;
 
 export const Msg = styled.p`

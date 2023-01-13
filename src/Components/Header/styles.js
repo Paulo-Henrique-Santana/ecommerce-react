@@ -5,14 +5,16 @@ import CartSVG from "../Svg/CartSVG";
 import SearchSVG from "../Svg/SearchSVG";
 
 export const StyledHeader = styled.header`
+  align-self: flex-start;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 20px;
   margin-bottom: 50px;
   padding: 25px 40px;
-  background-color: #f7f7f7;
-  width: 100%;
+  width: 100vw;
+  background-color: var(--color2);
+  box-shadow: 0px 1px 6px 0px rgb(0 0 0 / 15%);
   @media (max-width: 1440px) {
     padding: 20px 15px;
   }
@@ -28,7 +30,7 @@ export const StyledHeader = styled.header`
 `;
 
 export const Title = styled.h1`
-  color: var(--color2);
+  color: var(--color1);
   white-space: nowrap;
   font-style: italic;
   @media (max-width: 320px) {
@@ -88,7 +90,7 @@ export const StyledLink = styled(Link)`
   display: flex;
   align-items: center;
   gap: 5px;
-  color: var(--color2);
+  color: var(--color1);
   @media (max-width: 768px) {
     span {
       display: none;
@@ -100,7 +102,7 @@ export const Favorites = styled(FavoriteSVG)`
   width: 35px;
   height: 35px;
   path {
-    fill: var(--color2);
+    fill: var(--color1);
   }
 `;
 
@@ -108,9 +110,9 @@ export const Cart = styled(CartSVG)`
   width: 35px;
   height: 35px;
   circle {
-    fill: var(--color2);
+    fill: var(--color1);
   }
   path {
-    stroke: var(--color2);
+    stroke: var(--color1);
   }
 `;

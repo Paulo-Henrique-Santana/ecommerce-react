@@ -6,7 +6,7 @@ export const FiltersStyle = createGlobalStyle`
 
 export const H2 = styled.h2`
   margin-bottom: 15px;
-  color: var(--color2);
+  color: var(--color1);
 `;
 
 export const Ul = styled.ul`

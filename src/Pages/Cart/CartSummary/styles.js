@@ -6,7 +6,9 @@ export const Summary = styled.div`
   padding: 25px;
   height: max-content;
   max-width: 400px;
-  background-color: var(--color1);
+  background-color: var(--color2);
+  box-shadow: var(--box-shadow1);
+  animation: showRight 0.5s;
   @media (max-width: 1024px) {
     width: 100%;
   }
@@ -42,7 +44,7 @@ export const CouponInput = styled.input`
   font-size: 1.1rem;
   text-transform: uppercase;
   &:focus {
-    border-color: var(--color2);
+    border-color: var(--color1);
   }
 `;
 
@@ -61,7 +63,7 @@ export const CouponButton = styled.button`
   padding: 0 15px;
   font-size: 0.95rem;
   font-weight: bold;
-  background-color: var(--color2);
+  background-color: var(--color1);
   color: white;
 `;
 
@@ -71,6 +73,6 @@ export const FinishButton = styled.button`
   width: 100%;
   font-size: 1.2rem;
   font-weight: bold;
-  background-color: var(--color2);
+  background-color: var(--color1);
   color: white;
 `;
