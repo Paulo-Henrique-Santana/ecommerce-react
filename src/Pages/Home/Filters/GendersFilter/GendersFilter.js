@@ -1,8 +1,9 @@
 import React from "react";
+import Filter from "../Filter/Filter";
 import FiltersListItem from "../FiltersListItem/FiltersListItem";
-import { H2, Ul } from "../styles";
+import { Ul } from "../styles";
 
-const Genders = ({ shoes, setSelectedGenders }) => {
+const GendersFilter = ({ shoes, setSelectedGenders }) => {
   // const genders = [...new Set(shoes.map((shoe) => shoe.gender))];
   const genders = ["Masculino", "Feminino", "Unissex", "Infantil"];
 
@@ -15,8 +16,8 @@ const Genders = ({ shoes, setSelectedGenders }) => {
   };
 
   return (
-    <div>
-      <H2>Gênero</H2>
+    <Filter>
+      <h2>Gênero</h2>
       <Ul>
         {genders.map((gender, index) => (
           <FiltersListItem key={index} selectItem={selectGender}>
@@ -24,8 +25,8 @@ const Genders = ({ shoes, setSelectedGenders }) => {
           </FiltersListItem>
         ))}
       </Ul>
-    </div>
+    </Filter>
   );
 };
 
-export default Genders;
+export default GendersFilter;

@@ -1,8 +1,9 @@
 import React from "react";
+import Filter from "../Filter/Filter";
 import FiltersListItem from "../FiltersListItem/FiltersListItem";
-import { H2, Ul } from "../styles";
+import { Ul } from "../styles";
 
-const Prices = ({ setSelectedPrices }) => {
+const PricesFilter = ({ setSelectedPrices }) => {
   const prices = [500, 600, 700, 800, 900, 1000];
 
   const selectPrice = ({ currentTarget }) => {
@@ -14,8 +15,8 @@ const Prices = ({ setSelectedPrices }) => {
   };
 
   return (
-    <div>
-      <H2>Preço</H2>
+    <Filter>
+      <h2>Preço</h2>
       <Ul>
         {prices.map((price, index) => (
           <FiltersListItem id={index} key={index} selectItem={selectPrice}>
@@ -25,8 +26,8 @@ const Prices = ({ setSelectedPrices }) => {
           </FiltersListItem>
         ))}
       </Ul>
-    </div>
+    </Filter>
   );
 };
 
-export default Prices;
+export default PricesFilter;

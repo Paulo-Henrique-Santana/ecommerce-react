@@ -1,5 +1,11 @@
 import styled from "styled-components";
 
+export const FilterTitle = styled.h1`
+  margin-bottom: 50px;
+  text-align: center;
+  font-size: 1.6rem;
+`;
+
 export const BtnFilters = styled.button`
   width: 95vw;
   display: flex;
@@ -23,18 +29,20 @@ export const ContainerFiltersMobile = styled.div`
   z-index: 1;
 `;
 
-export const FiltersMobile = styled.div`
+export const FiltersMobile = styled.ul`
   display: block;
   padding: 40px 25px 0 25px;
   max-width: 250px;
   height: 100%;
   background-color: #f7f7f7;
   position: relative;
+  user-select: none;
 `;
 
-export const Filters = styled.div`
+export const Filters = styled.ul`
   height: max-content;
   animation: showLeft 0.5s;
+  user-select: none;
 `;
 
 export const CloseBtn = styled.button`

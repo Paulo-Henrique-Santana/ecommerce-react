@@ -1,16 +1,9 @@
 import React from "react";
-import Genders from "../Genders/Genders";
-import Prices from "../Prices/Prices";
+import Genders from "../GendersFilter/GendersFilter";
+import Prices from "../PricesFilter/PricesFilter";
 import SizesFilter from "../SizesFilter/SizesFilter";
-import { FiltersStyle } from "../styles";
-import {
-  CloseBtn,
-  BtnFilters,
-  ContainerFiltersMobile,
-  FiltersMobile,
-  Filters,
-} from "./styles";
 import FiltersSVG from "../../../../Components/Svg/FiltersSVG";
+import * as S from "./styles";
 
 const FiltersMenu = ({
   shoes,
@@ -61,32 +54,32 @@ const FiltersMenu = ({
   if (mobile)
     return (
       <>
-        <BtnFilters onClick={handleClickFiltersMobile}>
+        <S.BtnFilters onClick={handleClickFiltersMobile}>
           <span>Filtros</span>
           <FiltersSVG />
-        </BtnFilters>
-        <ContainerFiltersMobile
+        </S.BtnFilters>
+        <S.ContainerFiltersMobile
           ref={containerFiltersMobile}
           filtersMobile={filtersMobile}
         >
-          <FiltersMobile>
-            <FiltersStyle />
-            <CloseBtn onClick={() => setFiltersMobile(false)}>x</CloseBtn>
+          <S.FiltersMobile>
+            <S.FilterTitle>Filtros</S.FilterTitle>
+            <S.CloseBtn onClick={() => setFiltersMobile(false)}>x</S.CloseBtn>
             <SizesFilter shoes={shoes} setSelectedSizes={setSelectedSizes} />
             <Prices setSelectedPrices={setSelectedPrices} />
             <Genders shoes={shoes} setSelectedGenders={setSelectedGenders} />
-          </FiltersMobile>
-        </ContainerFiltersMobile>
+          </S.FiltersMobile>
+        </S.ContainerFiltersMobile>
       </>
     );
   else
     return (
-      <Filters>
-        <FiltersStyle />
+      <S.Filters>
+        <S.FilterTitle>Filtros</S.FilterTitle>
         <SizesFilter shoes={shoes} setSelectedSizes={setSelectedSizes} />
         <Prices setSelectedPrices={setSelectedPrices} />
         <Genders shoes={shoes} setSelectedGenders={setSelectedGenders} />
-      </Filters>
+      </S.Filters>
     );
 };
 
