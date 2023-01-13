@@ -6,7 +6,7 @@ export const StyledFooter = styled.footer`
   align-items: center;
   margin-top: 40px;
   padding: 20px 0;
-  width: 100vw;
+  width: 100%;
   background-color: var(--color2);
   box-shadow: 0px -1px 6px 0px rgb(0 0 0 / 15%);
 `;

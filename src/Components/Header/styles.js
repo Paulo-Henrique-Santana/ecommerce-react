@@ -12,7 +12,7 @@ export const StyledHeader = styled.header`
   gap: 20px;
   margin-bottom: 50px;
   padding: 25px 40px;
-  width: 100vw;
+  width: 100%;
   background-color: var(--color2);
   box-shadow: 0px 1px 6px 0px rgb(0 0 0 / 15%);
   @media (max-width: 1440px) {

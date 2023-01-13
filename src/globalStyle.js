@@ -23,18 +23,19 @@ const GlobalStyle = createGlobalStyle`
   }
   
   #root {
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    min-height: 100vh;
+    width: 100vw;
     position: relative;
   }
   
   main {
+    flex: 1;
     padding: 0 15px;
     max-width: 1440px;
-    min-height: 600px;
     color: var(--color1);
   }
 
