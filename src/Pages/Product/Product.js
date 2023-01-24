@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
+import Head from "../../Components/Head/Head";
 import useCart from "../../Hooks/useCart";
 import useFavoritesId from "../../Hooks/useFavoritesId";
 import { ShoesContext } from "../../ShoesContext";
@@ -57,6 +58,7 @@ const Product = () => {
   if (product)
     return (
       <S.Main>
+        <Head title={product.name} description={product.name} />
         <S.BoxImage>
           <img src={product.colors[colorIndex].url} alt={product.name} />
           <S.Favorite

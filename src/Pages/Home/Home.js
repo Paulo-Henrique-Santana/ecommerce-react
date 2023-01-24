@@ -3,6 +3,7 @@ import FiltersMenu from "./Filters/FiltersMenu/FiltersMenu";
 import Products from "./Products/Products";
 import { ShoesContext } from "../../ShoesContext";
 import { StyledHome } from "./styles";
+import Head from "../../Components/Head/Head";
 
 const Home = () => {
   const shoes = React.useContext(ShoesContext);
@@ -24,6 +25,7 @@ const Home = () => {
 
   return (
     <StyledHome>
+      <Head description="Melhores tênis para se exercitar ou utilizar no dia-a-dia" />
       {shoes.data && (
         <FiltersMenu
           shoes={shoes.data}

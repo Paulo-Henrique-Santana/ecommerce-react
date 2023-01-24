@@ -6,6 +6,7 @@ import CartSummary from "./CartSummary/CartSummary";
 import CartSVG from "../../Components/Svg/CartSVG";
 import * as S from "./styles";
 import EmptyPageWarning from "../../Components/EmptyPageWarning/EmptyPageWarning";
+import Head from "../../Components/Head/Head";
 
 const Cart = () => {
   const { data, toCurrencyBRL } = React.useContext(ShoesContext);
@@ -29,26 +30,29 @@ const Cart = () => {
       );
   }, [data, cart]);
 
-  if (cart.length)
-    return (
-      <S.Main>
-        <CartProducts
-          cartProducts={cartProducts}
-          toCurrencyBRL={toCurrencyBRL}
-          changeQuantity={changeQuantity}
-          removeProduct={removeProduct}
-        />
-        <CartSummary
-          cartProducts={cartProducts}
-          toCurrencyBRL={toCurrencyBRL}
-        />
-      </S.Main>
-    );
   return (
-    <EmptyPageWarning>
-      <CartSVG />
-      <h1>Seu carrinho está vazio :(</h1>
-    </EmptyPageWarning>
+    <>
+      <Head title="Meu Carrinho" description="Carrinho de compras" />
+      {cart.length ? (
+        <S.Main>
+          <CartProducts
+            cartProducts={cartProducts}
+            toCurrencyBRL={toCurrencyBRL}
+            changeQuantity={changeQuantity}
+            removeProduct={removeProduct}
+          />
+          <CartSummary
+            cartProducts={cartProducts}
+            toCurrencyBRL={toCurrencyBRL}
+          />
+        </S.Main>
+      ) : (
+        <EmptyPageWarning>
+          <CartSVG />
+          <h1>Seu carrinho está vazio :(</h1>
+        </EmptyPageWarning>
+      )}
+    </>
   );
 };
 
